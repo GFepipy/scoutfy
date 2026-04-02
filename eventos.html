@@ -1,0 +1,188 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scoutfy | Eventos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./base.css" />
+  <link rel="stylesheet" href="./eventos.css" />
+</head>
+<body class="pagina-eventos">
+  <header class="cabecalho-principal">
+    <div class="container container-cabecalho cabecalho-conteudo">
+      <a href="#" class="marca" aria-label="Scoutfy - Pagina inicial">
+        <img src="./assets/logo-scoutfy.svg" alt="Scoutfy" class="marca-imagem" />
+      </a>
+
+      <button type="button" class="botao-menu-hamburguer" id="botao-menu-mobile" aria-label="Abrir menu principal" aria-controls="painel-menu-mobile" aria-expanded="false">
+        <span class="linha-hamburguer"></span>
+        <span class="linha-hamburguer"></span>
+        <span class="linha-hamburguer"></span>
+      </button>
+
+      <nav class="navegacao-principal" aria-label="Navegacao principal">
+        <a href="#" class="link-navegacao">Inicio</a>
+        <a href="#" class="link-navegacao">Encontrar Atletas</a>
+        <a href="#" class="link-navegacao">Encontrar Eventos</a>
+        <a href="#" class="link-navegacao">Quem Somos</a>
+      </nav>
+
+      <div class="acoes-cabecalho">
+        <a href="./login.html" class="link-login-cabecalho">Login</a>
+        <a href="./cadastro.html" class="botao botao-cadastro">CADASTRE-SE</a>
+      </div>
+    </div>
+
+    <div class="sobreposicao-menu-mobile" id="sobreposicao-menu-mobile" data-fechar-menu></div>
+
+    <aside class="painel-menu-mobile" id="painel-menu-mobile" aria-hidden="true">
+      <div class="topo-painel-menu">
+        <p class="titulo-painel-menu">Menu</p>
+        <button type="button" class="botao-fechar-menu" aria-label="Fechar menu" data-fechar-menu>&times;</button>
+      </div>
+
+      <nav class="navegacao-menu-mobile" aria-label="Menu mobile">
+        <a href="#" class="link-menu-mobile" data-link-menu-mobile>Inicio</a>
+        <a href="#" class="link-menu-mobile" data-link-menu-mobile>Encontrar Atletas</a>
+        <a href="#" class="link-menu-mobile" data-link-menu-mobile>Encontrar Eventos</a>
+        <a href="#" class="link-menu-mobile" data-link-menu-mobile>Quem Somos</a>
+      </nav>
+
+      <div class="acoes-menu-mobile">
+        <a href="./login.html" class="link-login-mobile" data-link-menu-mobile>Login</a>
+        <a href="./cadastro.html" class="botao botao-cadastro botao-cadastro-mobile" data-link-menu-mobile>CADASTRE-SE</a>
+      </div>
+    </aside>
+  </header>
+
+  <main class="conteudo-principal">
+    <section class="secao-evento">
+      <div class="container container-conteudo-evento">
+        <article class="card-banner-evento">
+          <img src="./assets/imagem-peneira.png" alt="Evento avaliacao tecnica sao paulo" class="imagem-banner-evento" />
+          <div class="sobreposicao-banner-evento"></div>
+
+          <div class="conteudo-banner-evento">
+            <p class="tipo-banner-evento">
+              <img src="./assets/icon-stadium.svg" alt="" class="icone-tipo-banner-evento" />
+              AVALIACAO
+            </p>
+
+            <h1 class="titulo-banner-evento">AVALIACAO TECNICA SAO PAULO</h1>
+
+            <div class="metas-banner-evento">
+              <p class="meta-banner-evento">
+                <img src="./assets/icon-calendar.svg" alt="" class="icone-meta-banner-evento" />
+                01 de Junho de 2025
+              </p>
+
+              <p class="meta-banner-evento">
+                <img src="./assets/icon-location.svg" alt="" class="icone-meta-banner-evento" />
+                Estadio Municipal, Sao Paulo - SP
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <div class="layout-conteudo-evento">
+          <section class="coluna-principal-evento">
+            <article class="cartao cartao-sobre-evento">
+              <h3 class="titulo-cartao-sobre-evento">SOBRE O EVENTO</h3>
+
+              <h2 class="titulo-secao-evento">A MAIOR OPORTUNIDADE DO ANO</h2>
+
+              <div class="texto-sobre-evento">
+                <p>FootFinder, em parceria oficial com a Federacao Nacional, apresenta a Grande Peneira Sub-20, uma oportunidade unica para jovens atletas que desejam dar o proximo passo rumo ao futebol profissional.</p>
+                <p>Serao dois dias intensos de imersao total, reunindo scouts e observadores tecnicos de mais de 10 clubes profissionais das Series A e B do futebol brasileiro. Durante esse periodo, os atletas terao contato direto com profissionais experientes do mercado, em um ambiente de alto nivel competitivo.</p>
+                <p>Ao longo do evento, os participantes serao avaliados em fundamentos tecnicos, inteligencia tatica e preparo fisico, alem de demonstrarem maturidade e comportamento sob pressao em situacoes reais de jogo. Cada detalhe do desempenho sera cuidadosamente analisado pelos avaliadores presentes.</p>
+              </div>
+
+              <article class="card-requisitos-evento">
+                <h3 class="titulo-card-interno-evento">
+                  <img src="./assets/icon-prancheta.svg" alt="" class="icone-titulo-card-interno" />
+                  REQUISITOS DE PARTICIPACAO
+                </h3>
+
+                <ul class="lista-requisitos-evento">
+                  <li class="item-requisito-evento"><img src="./assets/icon-check.svg" alt="" class="icone-item-requisito" /> Idade entre 17 e 20 anos (Nascidos em 2006 - 2009)</li>
+                  <li class="item-requisito-evento"><img src="./assets/icon-check.svg" alt="" class="icone-item-requisito" /> Atestado medico de aptidao fisica original</li>
+                  <li class="item-requisito-evento"><img src="./assets/icon-check.svg" alt="" class="icone-item-requisito" /> RG ou CNG original com foto</li>
+                  <li class="item-requisito-evento"><img src="./assets/icon-check.svg" alt="" class="icone-item-requisito" /> Uniforme: Chuteira, caneleira e calcao preto</li>
+                </ul>
+              </article>
+            </article>
+
+            <article class="cartao cartao-cronograma-evento">
+              <h3 class="titulo-card-interno-evento">
+                <img src="./assets/icon-clock.svg" alt="" class="icone-titulo-card-interno" />
+                CRONOGRAMA DO EVENTO
+              </h3>
+
+              <ul class="lista-cronograma-evento">
+                <li class="item-cronograma-evento">
+                  <span class="horario-cronograma">08:00</span>
+                  <span class="descricao-cronograma">Acreditacao e entrega dos kits numerados</span>
+                </li>
+                <li class="item-cronograma-evento">
+                  <span class="horario-cronograma">09:30</span>
+                  <span class="descricao-cronograma">Aquecimento tecnico e divisao de times por posicao</span>
+                </li>
+                <li class="item-cronograma-evento">
+                  <span class="horario-cronograma">10:30</span>
+                  <span class="descricao-cronograma">Inicio dos jogos monitorados - 1a Rodada</span>
+                </li>
+                <li class="item-cronograma-evento">
+                  <span class="horario-cronograma">14:00</span>
+                  <span class="descricao-cronograma">Feedback coletivo e entrevistas com scouts</span>
+                </li>
+              </ul>
+            </article>
+          </section>
+
+          <aside class="coluna-lateral-evento">
+            <article class="cartao cartao-inscricao-evento">
+              <h4 class="titulo-inscricao-evento">INSCRICAO</h4>
+
+              <div class="topo-inscricao-evento">
+                <p class="meta-inscricao-evento"><img src="./assets/icon-users.svg" alt="" class="icone-meta-inscricao" /> Vagas</p>
+                <p class="quantidade-inscricao-evento">78/100</p>
+              </div>
+
+              <div class="barra-progresso-inscricao">
+                <span class="preenchimento-progresso-inscricao" style="width: 78%;"></span>
+              </div>
+
+              <p class="texto-inscritos-evento">78 atletas ja inscritos</p>
+
+              <button type="button" class="botao botao-inscricao-evento">INSCREVER-SE NO EVENTO +</button>
+            </article>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape-principal">
+    <div class="container conteudo-rodape">
+      <a href="#" class="marca-rodape" aria-label="Scoutfy - Pagina inicial">
+        <img src="./assets/logo-scoutfy.svg" alt="Scoutfy" class="marca-rodape-imagem" />
+      </a>
+
+      <nav class="navegacao-rodape" aria-label="Links do rodape">
+        <a href="#" class="link-rodape">Termos</a>
+        <a href="#" class="link-rodape">Privacidade</a>
+        <a href="#" class="link-rodape">Contato</a>
+      </nav>
+
+      <p class="texto-rodape">&copy; 2026 Scoutfy. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="./menu-mobile.js"></script>
+</body>
+</html>
+
+

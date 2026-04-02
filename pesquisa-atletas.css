@@ -1,0 +1,556 @@
+.link-navegacao,
+.link-login-cabecalho,
+.link-rodape,
+.acao-limpar {
+  color: var(--cor-texto-principal);
+  transition: color var(--duracao-transicao) ease;
+}
+
+.link-navegacao:hover,
+.link-login-cabecalho:hover,
+.link-rodape:hover,
+.acao-limpar:hover,
+.item-paginacao:hover {
+  color: var(--cor-primaria);
+}
+
+.secao-atletas {
+  padding: 52px 0 92px;
+}
+
+.container-conteudo-atletas {
+  width: min(1340px, calc(100% - (var(--padding-conteudo) * 2)));
+  padding-inline: 0;
+}
+
+.cabecalho-atletas {
+  margin-bottom: 30px;
+}
+
+.chamada-atletas {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--cor-texto-principal);
+  font-size: var(--tamanho-paragrafo);
+  font-weight: var(--peso-bold);
+  margin-bottom: 10px;
+}
+
+.icone-chamada {
+  width: 14px;
+  height: 14px;
+}
+
+.titulo-atletas {
+  font-size: clamp(2.2rem, 2rem + 1vw, 3.5rem);
+  margin-bottom: 8px;
+}
+
+.descricao-atletas {
+  color: var(--cor-texto-secundario);
+  max-width: 760px;
+}
+
+.layout-atletas {
+  display: grid;
+  grid-template-columns: 380px minmax(0, 1fr);
+  gap: 34px;
+  align-items: start;
+}
+
+.cartao {
+  background: var(--cor-fundo-cartao);
+  border-radius: var(--raio-card);
+  padding: 34px;
+}
+
+.cartao-filtros {
+  position: sticky;
+  top: 22px;
+}
+
+.topo-filtros {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--espaco-3);
+  margin-bottom: 20px;
+}
+
+.titulo-com-expandir-filtros {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.botao-expandir-filtros {
+  display: none;
+  width: 20px;
+  height: 20px;
+  border: 0;
+  background: transparent;
+  color: var(--cor-texto-principal);
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.icone-expandir-filtros {
+  width: 14px;
+  height: 14px;
+  display: block;
+  transition: transform var(--duracao-transicao) ease;
+}
+
+.cartao-filtros.filtros-abertos .icone-expandir-filtros {
+  transform: rotate(90deg);
+}
+
+.titulo-filtros {
+  font-size: var(--tamanho-h4);
+}
+
+.titulo-filtros[data-titulo-expandir-filtros] {
+  outline: none;
+}
+
+.conteudo-filtros {
+  display: block;
+}
+
+.conteudo-filtros[hidden] {
+  display: none;
+}
+
+.acao-limpar {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  color: var(--cor-texto-secundario);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0;
+}
+
+.icone-limpar {
+  width: 14px;
+  height: 14px;
+  display: block;
+}
+
+.grupo-filtro {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.rotulo-filtro {
+  color: var(--cor-texto-principal);
+}
+
+.campo-filtro {
+  width: 100%;
+  min-height: 54px;
+  border: var(--espessura-borda) solid var(--cor-borda);
+  border-radius: var(--raio-botao);
+  background: transparent;
+  color: var(--cor-texto-secundario);
+  padding: 0 16px;
+  font-family: var(--fonte-principal);
+  appearance: none;
+}
+
+.campo-filtro::placeholder {
+  color: var(--cor-texto-secundario);
+}
+
+.campo-filtro option {
+  background: var(--cor-fundo-cartao);
+  color: var(--cor-texto-principal);
+}
+
+.campo-com-icone {
+  position: relative;
+}
+
+.icone-campo-filtro {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 14px;
+  pointer-events: none;
+}
+
+.campo-filtro-input {
+  padding-left: 42px;
+}
+
+.linha-campos-idade {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.campo-idade {
+  padding: 0 14px;
+}
+
+.botao-filtrar {
+  width: 100%;
+  height: 54px;
+  border-radius: var(--raio-botao);
+  background: var(--cor-primaria);
+  color: #000;
+  margin-top: 4px;
+}
+
+.coluna-resultados {
+  display: grid;
+  gap: 34px;
+}
+
+.grade-cards-atletas {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 34px;
+}
+
+.card-atleta {
+  background: var(--cor-fundo-cartao);
+  border-radius: var(--raio-card);
+  overflow: hidden;
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
+}
+
+.topo-card-atleta {
+  position: relative;
+}
+
+.imagem-atleta {
+  width: 100%;
+  height: 390px;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+.tag-posicao-atleta {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 24px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background: #282a26;
+  color: var(--cor-primaria);
+  font-size: 10px;
+  font-weight: var(--peso-bold);
+  letter-spacing: 0.2px;
+}
+
+.conteudo-card-atleta {
+  padding: 20px 22px 24px;
+  display: grid;
+  align-content: start;
+  gap: 12px;
+  flex: 1;
+}
+
+.nome-atleta {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start;
+  gap: 8px;
+  font-size: var(--tamanho-h4);
+  line-height: 1.08;
+  color: var(--cor-primaria);
+}
+
+.idade-atleta {
+  display: inline-flex;
+  align-items: end;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.numero-idade-atleta {
+  font-size: 36px;
+  font-weight: var(--peso-bold);
+  line-height: 0.88;
+}
+
+.sufixo-idade-atleta {
+  font-size: 18px;
+  font-weight: var(--peso-regular);
+  line-height: 1.1;
+  margin-bottom: 0;
+}
+
+.meta-atleta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.meta-item-atleta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--cor-texto-principal);
+  font-size: var(--tamanho-paragrafo);
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.icone-meta-atleta {
+  width: 14px;
+  height: 14px;
+  flex: 0 0 auto;
+}
+
+.paginacao {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  justify-self: center;
+  min-height: 34px;
+  padding: 2px 8px;
+  border: var(--espessura-borda) solid var(--cor-borda);
+  border-radius: 999px;
+}
+
+.item-paginacao {
+  position: relative;
+  min-width: 34px;
+  height: 26px;
+  color: var(--cor-texto-secundario);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 16px;
+  font-size: 18px;
+  font-weight: var(--peso-bold);
+  line-height: 1;
+}
+
+.item-paginacao + .item-paginacao::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2px;
+  height: 18px;
+  background: var(--cor-borda);
+}
+
+.item-paginacao-ativo {
+  color: var(--cor-primaria);
+}
+
+.item-paginacao-proximo {
+  min-width: 94px;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  gap: 6px;
+}
+
+.icone-proximo-paginacao {
+  width: 10px;
+  height: 10px;
+  display: block;
+}
+
+@media (max-width: 1490px) {
+  .layout-atletas {
+    grid-template-columns: 380px minmax(0, 1fr);
+  }
+
+  .grade-cards-atletas {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1180px) {
+  .layout-atletas {
+    grid-template-columns: 1fr;
+  }
+
+  .cartao-filtros {
+    position: static;
+  }
+
+  .topo-filtros {
+    margin-bottom: 0;
+  }
+
+  .botao-expandir-filtros {
+    display: inline-flex;
+  }
+
+  .titulo-filtros[data-titulo-expandir-filtros] {
+    cursor: pointer;
+  }
+
+  .conteudo-filtros {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 1074px) {
+  .cabecalho-conteudo {
+    grid-template-columns: 1fr auto;
+    gap: var(--espaco-4);
+  }
+
+  .botao-menu-hamburguer {
+    display: inline-flex;
+  }
+
+  .navegacao-principal,
+  .acoes-cabecalho {
+    display: none;
+  }
+
+  .secao-atletas {
+    padding-top: 46px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cartao {
+    border-radius: var(--raio-card-mobile);
+    padding: 34px;
+  }
+
+  .titulo-atletas {
+    font-size: 42px;
+  }
+
+  .grade-cards-atletas {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .card-atleta {
+    border-radius: var(--raio-card-mobile);
+  }
+
+  .imagem-atleta {
+    height: 320px;
+  }
+
+  .nome-atleta {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 6px;
+    font-size: 22px;
+  }
+
+  .idade-atleta {
+    justify-self: start;
+    align-items: baseline;
+  }
+
+  .numero-idade-atleta {
+    font-size: 18px;
+  }
+
+  .sufixo-idade-atleta {
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+
+  .meta-atleta {
+    gap: 8px;
+  }
+
+  .meta-item-atleta {
+    font-size: 14px;
+    white-space: normal;
+    min-width: 0;
+  }
+
+  .paginacao {
+    flex-wrap: wrap;
+    border-radius: 999px;
+    justify-content: center;
+    min-height: 34px;
+    padding: 2px 8px;
+  }
+
+  .item-paginacao {
+    min-width: 34px;
+    height: 26px;
+    font-size: 18px;
+    padding: 18px 16px;
+  }
+
+  .item-paginacao-proximo {
+    min-width: 94px;
+    font-size: 14px;
+  }
+
+  .item-paginacao + .item-paginacao::before {
+    height: 18px;
+  }
+
+  .botao-cadastro,
+  .botao-menu-hamburguer,
+  .botao-fechar-menu,
+  .link-login-mobile,
+  .botao-cadastro-mobile {
+    min-height: 54px;
+    height: 54px;
+  }
+
+  .conteudo-rodape {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--espaco-3);
+  }
+
+  .texto-rodape {
+    justify-self: start;
+  }
+
+  .navegacao-rodape {
+    gap: var(--espaco-4);
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 600px) {
+  .meta-atleta {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 6px;
+  }
+
+  .meta-item-atleta {
+    width: 100%;
+  }
+}
+
+@media (max-width: 520px) {
+  .imagem-atleta {
+    height: 270px;
+  }
+
+  .nome-atleta {
+    font-size: 18px;
+  }
+}

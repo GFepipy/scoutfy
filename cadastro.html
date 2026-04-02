@@ -1,0 +1,225 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scoutfy | Cadastro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./base.css" />
+  <link rel="stylesheet" href="./cadastro.css" />
+</head>
+<body class="pagina-cadastro">
+  <header class="cabecalho-principal">
+    <div class="container container-cabecalho cabecalho-conteudo">
+      <a href="#" class="marca" aria-label="Scoutfy - Pagina inicial">
+        <img src="./assets/logo-scoutfy.svg" alt="Scoutfy" class="marca-imagem" />
+      </a>
+
+      <button type="button" class="botao-menu-hamburguer" id="botao-menu-mobile" aria-label="Abrir menu principal" aria-controls="painel-menu-mobile" aria-expanded="false">
+        <span class="linha-hamburguer"></span>
+        <span class="linha-hamburguer"></span>
+        <span class="linha-hamburguer"></span>
+      </button>
+
+      <nav class="navegacao-principal" aria-label="Navegacao principal">
+        <a href="#" class="link-navegacao">Inicio</a>
+        <a href="#" class="link-navegacao">Encontrar Atletas</a>
+        <a href="#" class="link-navegacao">Encontrar Peneiras</a>
+        <a href="#" class="link-navegacao">Quem Somos</a>
+      </nav>
+
+      <div class="acoes-cabecalho">
+        <a href="#" class="link-login-cabecalho">Login</a>
+        <a href="#" class="botao botao-cadastro">CADASTRE-SE</a>
+      </div>
+    </div>
+
+    <div class="sobreposicao-menu-mobile" id="sobreposicao-menu-mobile" data-fechar-menu></div>
+
+    <aside class="painel-menu-mobile" id="painel-menu-mobile" aria-hidden="true">
+      <div class="topo-painel-menu">
+        <p class="titulo-painel-menu">Menu</p>
+        <button type="button" class="botao-fechar-menu" aria-label="Fechar menu" data-fechar-menu>&times;</button>
+      </div>
+
+      <nav class="navegacao-menu-mobile" aria-label="Menu mobile">
+        <a href="#" class="link-menu-mobile" data-link-menu-mobile>Inicio</a>
+        <a href="#" class="link-menu-mobile" data-link-menu-mobile>Encontrar Atletas</a>
+        <a href="#" class="link-menu-mobile" data-link-menu-mobile>Encontrar Peneiras</a>
+        <a href="#" class="link-menu-mobile" data-link-menu-mobile>Quem Somos</a>
+      </nav>
+
+      <div class="acoes-menu-mobile">
+        <a href="#" class="link-login-mobile" data-link-menu-mobile>Login</a>
+        <a href="#" class="botao botao-cadastro botao-cadastro-mobile" data-link-menu-mobile>CADASTRE-SE</a>
+      </div>
+    </aside>
+  </header>
+
+  <main class="conteudo-principal">
+    <section class="secao-cadastro">
+      <div class="container container-conteudo">
+        <div class="cartao-cadastro">
+          <aside class="painel-imagem-cadastro" aria-label="Imagem promocional">
+            <img src="./assets/imagem-cadastro.png" alt="Atleta correndo em campo de futebol" class="imagem-cadastro" />
+            <div class="sobreposicao-imagem"></div>
+            <div class="conteudo-imagem-cadastro">
+              <img src="./assets/logo-scoutfy.svg" alt="Scoutfy" class="logo-imagem-cadastro" />
+              <h2 class="titulo-imagem-cadastro">ONDE O <span class="texto-destaque">TALENTO</span> ENCONTRA A <span class="texto-destaque">OPORTUNIDADE</span></h2>
+              <p class="texto-imagem-cadastro">Junte-se a milhares de atletas e mostre seu potencial para olheiros de todo o mundo.</p>
+            </div>
+          </aside>
+
+          <div class="painel-formulario-cadastro">
+            <header class="topo-cadastro">
+              <h3 class="titulo-cadastro">FAZER CADASTRO</h3>
+              <p class="descricao-cadastro">Preencha os campos abaixo para iniciar sua jornada profissional.</p>
+            </header>
+
+            <form class="formulario-cadastro" action="#" method="post">
+              <div class="grade-campos-cadastro">
+                <div class="grupo-campo-cadastro">
+                  <label class="rotulo-campo-cadastro" for="nome-completo">Nome completo</label>
+                  <div class="controle-campo-cadastro">
+                    <span class="icone-campo-cadastro" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="8" r="3" stroke="currentColor" stroke-width="1.8"/>
+                        <path d="M6 18C6 15.7909 8.68629 14 12 14C15.3137 14 18 15.7909 18 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                      </svg>
+                    </span>
+                    <input class="campo-cadastro" type="text" id="nome-completo" name="nome_completo" placeholder="Nome e sobrenome" />
+                  </div>
+                </div>
+
+                <div class="grupo-campo-cadastro">
+                  <label class="rotulo-campo-cadastro" for="data-nascimento">Data de nascimento</label>
+                  <div class="controle-campo-cadastro">
+                    <span class="icone-campo-cadastro" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="4" y="6" width="16" height="14" rx="2" stroke="currentColor" stroke-width="1.8"/>
+                        <path d="M8 4V8M16 4V8M4 10H20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                      </svg>
+                    </span>
+                    <input class="campo-cadastro" type="text" id="data-nascimento" name="data_nascimento" placeholder="dd/mm/aaaa" />
+                  </div>
+                </div>
+
+                <div class="grupo-campo-cadastro">
+                  <label class="rotulo-campo-cadastro" for="whatsapp">WhatsApp para contato</label>
+                  <div class="controle-campo-cadastro">
+                    <span class="icone-campo-cadastro" aria-hidden="true">
+                      <img src="./assets/icon-whatsapp.svg" alt="" class="icone-whatsapp" />
+                    </span>
+                    <input class="campo-cadastro" type="tel" id="whatsapp" name="whatsapp" placeholder="(11) 99999-9999" />
+                  </div>
+                </div>
+
+                <div class="grupo-campo-cadastro">
+                  <label class="rotulo-campo-cadastro" for="email">E-mail</label>
+                  <div class="controle-campo-cadastro">
+                    <span class="icone-campo-cadastro" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 7.5C4 6.67157 4.67157 6 5.5 6H18.5C19.3284 6 20 6.67157 20 7.5V16.5C20 17.3284 19.3284 18 18.5 18H5.5C4.67157 18 4 17.3284 4 16.5V7.5Z" stroke="currentColor" stroke-width="1.8"/>
+                        <path d="M4.5 7L12 13L19.5 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </span>
+                    <input class="campo-cadastro" type="email" id="email" name="email" placeholder="seu@email.com" />
+                  </div>
+                </div>
+
+                <div class="grupo-campo-cadastro">
+                  <label class="rotulo-campo-cadastro" for="senha">Senha</label>
+                  <div class="controle-campo-cadastro">
+                    <span class="icone-campo-cadastro" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 11V8C8 5.79086 9.79086 4 12 4C14.2091 4 16 5.79086 16 8V11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                        <rect x="5" y="11" width="14" height="9" rx="2" stroke="currentColor" stroke-width="1.8"/>
+                        <circle cx="12" cy="15.5" r="1.2" fill="currentColor"/>
+                      </svg>
+                    </span>
+                    <input class="campo-cadastro" type="password" id="senha" name="senha" placeholder="••••••••" />
+                  </div>
+                </div>
+
+                <div class="grupo-campo-cadastro">
+                  <label class="rotulo-campo-cadastro" for="confirmar-senha">Confirme sua senha</label>
+                  <div class="controle-campo-cadastro">
+                    <span class="icone-campo-cadastro" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 11V8C8 5.79086 9.79086 4 12 4C14.2091 4 16 5.79086 16 8V11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                        <rect x="5" y="11" width="14" height="9" rx="2" stroke="currentColor" stroke-width="1.8"/>
+                        <circle cx="12" cy="15.5" r="1.2" fill="currentColor"/>
+                      </svg>
+                    </span>
+                    <input class="campo-cadastro" type="password" id="confirmar-senha" name="confirmar_senha" placeholder="••••••••" />
+                  </div>
+                </div>
+
+                <div class="grupo-campo-cadastro">
+                  <label class="rotulo-campo-cadastro" for="estado">Estado (UF)</label>
+                  <div class="controle-campo-cadastro controle-campo-selecao">
+                    <span class="icone-campo-cadastro" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 10L12 14L16 10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </span>
+                    <select class="campo-cadastro campo-selecao" id="estado" name="estado">
+                      <option value="" selected disabled>Selecione o estado</option>
+                      <option value="SP">Sao Paulo</option>
+                      <option value="RJ">Rio de Janeiro</option>
+                      <option value="MG">Minas Gerais</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="grupo-campo-cadastro">
+                  <label class="rotulo-campo-cadastro" for="cidade">Cidade</label>
+                  <div class="controle-campo-cadastro">
+                    <span class="icone-campo-cadastro" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 21C15.5 17 18 13.9 18 10.8C18 7.6 15.31 5 12 5C8.69 5 6 7.6 6 10.8C6 13.9 8.5 17 12 21Z" stroke="currentColor" stroke-width="1.8"/>
+                        <circle cx="12" cy="10.8" r="2" fill="currentColor"/>
+                      </svg>
+                    </span>
+                    <input class="campo-cadastro" type="text" id="cidade" name="cidade" placeholder="Escreva a cidade" />
+                  </div>
+                </div>
+
+                <button type="submit" class="botao botao-criar-conta">CRIAR CONTA -></button>
+
+                <p class="texto-login">
+                  Ja possui uma conta?
+                  <a href="#" class="link-login-cadastro">Faca Login</a>
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape-principal">
+    <div class="container conteudo-rodape">
+      <a href="#" class="marca-rodape" aria-label="Scoutfy - Pagina inicial">
+        <img src="./assets/logo-scoutfy.svg" alt="Scoutfy" class="marca-rodape-imagem" />
+      </a>
+
+      <nav class="navegacao-rodape" aria-label="Links do rodape">
+        <a href="#" class="link-rodape">Termos</a>
+        <a href="#" class="link-rodape">Privacidade</a>
+        <a href="#" class="link-rodape">Contato</a>
+      </nav>
+
+      <p class="texto-rodape">&copy; 2026 Scoutfy. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="./menu-mobile.js"></script>
+</body>
+</html>
+
+
+

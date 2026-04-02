@@ -1,0 +1,451 @@
+.link-navegacao,
+.link-login-cabecalho,
+.link-rodape {
+  color: var(--cor-texto-principal);
+  transition: color var(--duracao-transicao) ease;
+}
+
+.link-navegacao:hover,
+.link-login-cabecalho:hover,
+.link-rodape:hover {
+  color: var(--cor-primaria);
+}
+
+.secao-atleta {
+  padding: 52px 0 92px;
+}
+
+.container-conteudo-atleta {
+  width: min(1340px, calc(100% - (var(--padding-conteudo) * 2)));
+  padding-inline: 0;
+}
+
+.cartao {
+  background: var(--cor-fundo-cartao);
+  border-radius: var(--raio-card);
+  padding: 34px;
+}
+
+.cartao-cabecalho-atleta {
+  padding: 0;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: minmax(360px, 360px) minmax(0, 1fr);
+  gap: 0;
+}
+
+.coluna-imagem-atleta {
+  min-height: 500px;
+}
+
+.imagem-atleta-principal {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+.coluna-dados-atleta {
+  padding: 44px 56px 46px;
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  align-content: stretch;
+  gap: 14px;
+}
+
+.nome-atleta-principal {
+  font-size: 58px;
+  line-height: 0.98;
+  color: var(--cor-primaria);
+}
+
+.lista-metas-atleta {
+  list-style: none;
+  padding: 0;
+  margin-top: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 24px;
+}
+
+.item-meta-atleta {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--cor-texto-principal);
+  line-height: 1.2;
+}
+
+.icone-meta-atleta {
+  width: 14px;
+  height: 14px;
+  flex: 0 0 auto;
+}
+
+.grade-informacoes-atleta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 62px;
+  margin-top: 12px;
+  margin-bottom: 24px;
+}
+
+.titulo-bloco-atleta {
+  font-size: var(--tamanho-h4);
+  margin-bottom: 18px;
+}
+
+.lista-definicoes-atleta {
+  display: grid;
+  gap: 12px;
+}
+
+.linha-definicao-atleta {
+  display: grid;
+  grid-template-columns: minmax(150px, 1fr) minmax(120px, 1fr);
+  gap: 18px;
+  align-items: baseline;
+}
+
+.linha-definicao-atleta dt {
+  color: var(--cor-texto-principal);
+}
+
+.linha-definicao-atleta dd {
+  color: var(--cor-texto-secundario);
+  margin: 0;
+  text-align: left;
+}
+
+.botao-contato-atleta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: 292px;
+  width: fit-content;
+  height: 54px;
+  padding: 0 28px;
+  border-radius: var(--raio-botao);
+  background: var(--cor-primaria);
+  color: #000;
+  justify-self: start;
+  align-self: start;
+}
+
+.icone-botao-contato {
+  width: 14px;
+  height: 14px;
+}
+
+.grade-inferior-atleta {
+  margin-top: 34px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(300px, 1fr);
+  gap: 34px;
+  align-items: start;
+}
+
+.titulo-cartao-atleta {
+  font-size: var(--tamanho-h4);
+  margin-bottom: 20px;
+}
+
+.grade-videos-atleta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.card-video-atleta {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: var(--espessura-borda) solid var(--cor-borda);
+  border-radius: 24px;
+  overflow: hidden;
+  min-height: 286px;
+  background: var(--cor-fundo-cartao);
+}
+
+.capa-video-atleta {
+  position: relative;
+  flex: 1;
+  min-height: 214px;
+  overflow: hidden;
+}
+
+.miniatura-video-atleta {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(1.4px) saturate(0.78);
+  transform: scale(1.05);
+}
+
+.capa-video-atleta::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgb(20 20 20 / 10%) 0%, rgb(20 20 20 / 40%) 100%);
+  z-index: 2;
+}
+
+.botao-play-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 56px;
+  height: 56px;
+  border: 0;
+  background: none;
+  background-image: url("./assets/icon-video-player.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  z-index: 3;
+}
+
+.botao-play-video::before {
+  content: none;
+}
+
+.titulo-video-atleta {
+  position: relative;
+  z-index: 4;
+  background: var(--cor-fundo-cartao);
+  border-top: var(--espessura-borda) solid rgb(63 63 63 / 65%);
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  padding: 0 26px;
+  font-size: 16px;
+  font-weight: var(--peso-bold);
+  line-height: 1.2;
+}
+
+.cabecalho-historico-atleta {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 16px;
+  padding-bottom: 12px;
+  border-bottom: var(--espessura-borda) solid var(--cor-borda);
+}
+
+.titulo-coluna-historico {
+  font-size: 16px;
+  font-weight: var(--peso-bold);
+}
+
+.lista-historico-atleta {
+  list-style: none;
+  padding: 0;
+  margin: 4px 0 0;
+  display: grid;
+}
+
+.linha-historico-atleta {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: var(--espessura-borda) solid rgb(63 63 63 / 55%);
+}
+
+.linha-historico-atleta:last-child {
+  border-bottom: 0;
+}
+
+.linha-historico-atleta span:first-child {
+  color: var(--cor-texto-principal);
+}
+
+.linha-historico-atleta span:last-child {
+  color: var(--cor-texto-secundario);
+}
+
+@media (max-width: 1240px) {
+  .cartao-cabecalho-atleta {
+    grid-template-columns: minmax(300px, 350px) minmax(0, 1fr);
+  }
+
+  .coluna-imagem-atleta {
+    min-height: 560px;
+  }
+
+  .coluna-dados-atleta {
+    padding: 34px 38px;
+  }
+
+  .nome-atleta-principal {
+    font-size: 50px;
+  }
+
+  .grade-informacoes-atleta {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .grade-inferior-atleta {
+    grid-template-columns: 1fr;
+  }
+
+  .cartao-historico-atleta {
+    order: -1;
+  }
+}
+
+@media (max-width: 1240px) and (min-width: 901px) {
+  .imagem-atleta-principal {
+    height: 60%;
+    border-radius: 18px;
+  }
+
+  .coluna-imagem-atleta {
+    min-height: 560px;
+    padding: 30px 0 0 30px;
+  }
+}
+
+@media (max-width: 1074px) {
+  .cabecalho-conteudo {
+    grid-template-columns: 1fr auto;
+    gap: var(--espaco-4);
+  }
+
+  .botao-menu-hamburguer {
+    display: inline-flex;
+  }
+
+  .navegacao-principal,
+  .acoes-cabecalho {
+    display: none;
+  }
+
+  .secao-atleta {
+    padding-top: 46px;
+  }
+}
+
+@media (max-width: 900px) {
+  .cartao-cabecalho-atleta {
+    grid-template-columns: 1fr;
+  }
+
+  .coluna-imagem-atleta {
+    min-height: 420px;
+    max-height: 500px;
+  }
+
+  .grade-informacoes-atleta {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .linha-definicao-atleta {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+
+  .linha-definicao-atleta dd {
+    text-align: left;
+  }
+
+  .botao-contato-atleta {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .cartao {
+    border-radius: var(--raio-card-mobile);
+    padding: 24px;
+  }
+
+  .cartao-cabecalho-atleta {
+    padding: 0;
+  }
+
+  .coluna-imagem-atleta {
+    min-height: 360px;
+    max-height: 430px;
+  }
+
+  .coluna-dados-atleta {
+    padding: 30px;
+    gap: 24px;
+  }
+
+  .nome-atleta-principal {
+    font-size: 44px;
+  }
+
+  .grade-videos-atleta {
+    grid-template-columns: 1fr;
+  }
+
+  .botao-cadastro,
+  .botao-menu-hamburguer,
+  .botao-fechar-menu,
+  .link-login-mobile,
+  .botao-cadastro-mobile,
+  .botao-contato-atleta {
+    min-height: 54px;
+    height: 54px;
+  }
+
+  .conteudo-rodape {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--espaco-3);
+  }
+
+  .texto-rodape {
+    justify-self: start;
+  }
+
+  .navegacao-rodape {
+    gap: var(--espaco-4);
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 520px) {
+  .card-video-atleta {
+    border-radius: 18px;
+  }
+
+  .cabecalho-historico-atleta {
+    grid-template-columns: 1fr;
+  }
+
+  .cabecalho-historico-atleta .titulo-coluna-historico:last-child {
+    display: none;
+  }
+
+  .coluna-imagem-atleta {
+    min-height: 300px;
+  }
+
+  .coluna-dados-atleta {
+    padding: 24px;
+  }
+
+  .nome-atleta-principal {
+    font-size: 34px;
+  }
+
+  .titulo-video-atleta {
+    font-size: 14px;
+  }
+
+  .linha-historico-atleta {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+}
