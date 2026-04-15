@@ -1,0 +1,420 @@
+.link-navegacao,
+.link-login-cabecalho,
+.link-rodape,
+.acao-adicionar-video {
+  color: var(--cor-texto-principal);
+  transition: color var(--duracao-transicao) ease;
+}
+
+.link-navegacao:hover,
+.link-rodape:hover,
+.acao-adicionar-video:hover {
+  color: var(--cor-primaria);
+}
+
+.botao-usuario,
+.botao-menu-usuario {
+  border: 0;
+  background: transparent;
+  color: var(--cor-texto-principal);
+  cursor: pointer;
+  font-family: var(--fonte-principal);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0;
+}
+
+.avatar-usuario {
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  object-fit: cover;
+}
+
+.texto-usuario {
+  font-weight: var(--peso-regular);
+}
+
+.seta-usuario {
+  color: var(--cor-texto-secundario);
+  font-size: 14px;
+}
+
+.botao-menu-usuario {
+  width: 100%;
+  justify-content: center;
+  min-height: 54px;
+  border: var(--espessura-borda) solid var(--cor-borda);
+  border-radius: var(--raio-botao);
+}
+
+.secao-dashboard-atleta {
+  padding: 52px 0 92px;
+}
+
+.container-conteudo-dashboard {
+  width: min(1340px, calc(100% - (var(--padding-conteudo) * 2)));
+  padding-inline: 0;
+}
+
+.cabecalho-dashboard {
+  margin-bottom: 26px;
+}
+
+.titulo-dashboard {
+  font-size: clamp(2.2rem, 2rem + 1vw, 3.5rem);
+  margin-bottom: 8px;
+}
+
+.descricao-dashboard {
+  color: var(--cor-texto-secundario);
+}
+
+.grade-acoes-rapidas {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 34px;
+  margin-bottom: 34px;
+}
+
+.cartao {
+  background: var(--cor-fundo-cartao);
+  border-radius: var(--raio-card);
+  padding: 34px;
+}
+
+.cartao-acao {
+  display: grid;
+  align-content: start;
+}
+
+.caixa-icone-acao {
+  width: 54px;
+  height: 54px;
+  border-radius: 12px;
+  background: #373737;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.icone-acao {
+  width: 24px;
+  height: 24px;
+}
+
+.titulo-cartao-acao {
+  font-size: var(--tamanho-h4);
+  margin-bottom: 10px;
+}
+
+.texto-cartao-acao {
+  color: var(--cor-texto-secundario);
+  margin-bottom: 22px;
+  min-height: 48px;
+}
+
+.botao-outline {
+  width: 100%;
+  height: 54px;
+  border-radius: var(--raio-botao);
+  border: var(--espessura-borda) solid var(--cor-primaria);
+  background: transparent;
+  color: var(--cor-primaria);
+}
+
+.grade-paineis-principais {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 34px;
+  align-items: start;
+}
+
+.titulo-painel {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--tamanho-h4);
+  margin-bottom: 20px;
+}
+
+.icone-titulo {
+  width: 18px;
+  height: 18px;
+}
+
+.painel-peneiras .icone-titulo {
+  width: 20px;
+  height: 20px;
+}
+
+.painel-convites .icone-titulo {
+  width: 24px;
+  height: 24px;
+}
+
+.lista-peneiras,
+.lista-convites {
+  display: grid;
+  gap: 24px;
+}
+
+.item-peneira,
+.item-convite {
+  border: var(--espessura-borda) solid var(--cor-borda);
+  border-radius: 18px;
+  padding: 22px;
+}
+
+.item-peneira {
+  display: grid;
+  grid-template-columns: 78px minmax(0, 1fr);
+  gap: 16px;
+}
+
+.conteudo-peneira {
+  display: grid;
+}
+
+.data-peneira {
+  width: 78px;
+  height: 78px;
+  border-radius: 12px;
+  border: var(--espessura-borda) solid var(--cor-borda);
+  background: transparent;
+  color: var(--cor-primaria);
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: 2px;
+}
+
+.mes-peneira {
+  font-size: 14px;
+  font-weight: var(--peso-bold);
+  line-height: 1;
+}
+
+.dia-peneira {
+  font-size: 36px;
+  line-height: 1;
+}
+
+.tipo-peneira {
+  color: var(--cor-primaria);
+  font-size: 14px;
+  font-weight: var(--peso-bold);
+  margin-bottom: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nome-peneira {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.meta-peneira {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  margin-bottom: 16px;
+}
+
+.meta-item-peneira {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #ececec;
+  font-size: 18px;
+}
+
+.descricao-peneira {
+  color: var(--cor-texto-secundario);
+}
+
+.descricao-peneira {
+  margin-bottom: 16px;
+  line-height: 1.35;
+  font-size: 18px;
+}
+
+.link-detalhes-peneira {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--cor-primaria);
+  font-weight: var(--peso-bold);
+  margin-left: auto;
+  justify-self: end;
+  font-size: 18px;
+}
+
+.icone-seta {
+  width: 12px;
+  height: 12px;
+}
+
+.circulo-seta {
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  background: #373737;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icone-tipo-peneira {
+  width: 14px;
+  height: 14px;
+}
+
+.icone-meta-peneira {
+  width: 14px;
+  height: 14px;
+}
+
+.topo-convite {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.escudo-clube {
+  width: 48px;
+  height: 48px;
+  border-radius: 0;
+}
+
+.painel-convites {
+  height: fit-content;
+  align-self: start;
+}
+
+.nome-clube {
+  font-size: 22px;
+  margin-bottom: 2px;
+}
+
+.olheiro-clube {
+  color: var(--cor-texto-secundario);
+}
+
+.descricao-convite {
+  color: var(--cor-texto-secundario);
+  line-height: 1.35;
+  margin-bottom: 14px;
+}
+
+.acoes-convite {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.botao-aceitar,
+.botao-recusar {
+  height: 42px;
+  border-radius: 12px;
+}
+
+.botao-aceitar {
+  background: #373737;
+  color: var(--cor-primaria);
+}
+
+.botao-recusar {
+  border: var(--espessura-borda) solid var(--cor-borda);
+  background: transparent;
+  color: var(--cor-texto-secundario);
+}
+
+.link-rodape,
+.texto-rodape {
+  color: var(--cor-texto-secundario);
+}
+
+@media (max-width: 1200px) {
+  .grade-acoes-rapidas,
+  .grade-paineis-principais {
+    gap: 34px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .grade-acoes-rapidas {
+    grid-template-columns: 1fr;
+  }
+
+  .grade-paineis-principais {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 1074px) {
+  .cabecalho-conteudo {
+    grid-template-columns: 1fr auto;
+    gap: var(--espaco-4);
+  }
+
+  .botao-menu-hamburguer {
+    display: inline-flex;
+  }
+
+  .navegacao-principal,
+  .acoes-cabecalho {
+    display: none;
+  }
+
+  .secao-dashboard-atleta {
+    padding-top: 46px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cartao {
+    border-radius: var(--raio-card-mobile);
+    padding: 34px;
+  }
+
+  .titulo-dashboard {
+    font-size: 42px;
+  }
+
+  .item-peneira {
+    grid-template-columns: 1fr;
+  }
+
+  .acoes-convite {
+    grid-template-columns: 1fr;
+  }
+
+  .botao-cadastro,
+  .botao-menu-hamburguer,
+  .botao-fechar-menu,
+  .botao-menu-usuario {
+    min-height: 54px;
+    height: 54px;
+  }
+
+  .conteudo-rodape {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--espaco-3);
+  }
+
+  .texto-rodape {
+    justify-self: start;
+  }
+
+  .navegacao-rodape {
+    gap: var(--espaco-4);
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,316 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scoutfy | Pesquisa de Atletas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./base.css" />
+  <link rel="stylesheet" href="./pesquisa-atletas.css" />
+</head>
+<body class="pagina-pesquisa-atletas">
+  <header class="cabecalho-principal">
+    <div class="container container-cabecalho cabecalho-conteudo">
+      <a href="#" class="marca" aria-label="Scoutfy - Pagina inicial">
+        <img src="./assets/logo-scoutfy.svg" alt="Scoutfy" class="marca-imagem" />
+      </a>
+
+      <button type="button" class="botao-menu-hamburguer" id="botao-menu-mobile" aria-label="Abrir menu principal" aria-controls="painel-menu-mobile" aria-expanded="false">
+        <span class="linha-hamburguer"></span>
+        <span class="linha-hamburguer"></span>
+        <span class="linha-hamburguer"></span>
+      </button>
+
+      <nav class="navegacao-principal" aria-label="Navegacao principal">
+        <a href="#" class="link-navegacao">Inicio</a>
+        <a href="#" class="link-navegacao">Encontrar Atletas</a>
+        <a href="#" class="link-navegacao">Encontrar Eventos</a>
+        <a href="#" class="link-navegacao">Quem Somos</a>
+      </nav>
+
+      <div class="acoes-cabecalho">
+        <a href="./login.html" class="link-login-cabecalho">Login</a>
+        <a href="./cadastro.html" class="botao botao-cadastro">CADASTRE-SE</a>
+      </div>
+    </div>
+
+    <div class="sobreposicao-menu-mobile" id="sobreposicao-menu-mobile" data-fechar-menu></div>
+
+    <aside class="painel-menu-mobile" id="painel-menu-mobile" aria-hidden="true">
+      <div class="topo-painel-menu">
+        <p class="titulo-painel-menu">Menu</p>
+        <button type="button" class="botao-fechar-menu" aria-label="Fechar menu" data-fechar-menu>&times;</button>
+      </div>
+
+      <nav class="navegacao-menu-mobile" aria-label="Menu mobile">
+        <a href="#" class="link-menu-mobile" data-link-menu-mobile>Inicio</a>
+        <a href="#" class="link-menu-mobile" data-link-menu-mobile>Encontrar Atletas</a>
+        <a href="#" class="link-menu-mobile" data-link-menu-mobile>Encontrar Eventos</a>
+        <a href="#" class="link-menu-mobile" data-link-menu-mobile>Quem Somos</a>
+      </nav>
+
+      <div class="acoes-menu-mobile">
+        <a href="./login.html" class="link-login-mobile" data-link-menu-mobile>Login</a>
+        <a href="./cadastro.html" class="botao botao-cadastro botao-cadastro-mobile" data-link-menu-mobile>CADASTRE-SE</a>
+      </div>
+    </aside>
+  </header>
+
+  <main class="conteudo-principal">
+    <section class="secao-atletas">
+      <div class="container container-conteudo-atletas">
+        <header class="cabecalho-atletas">
+          <p class="chamada-atletas"><img src="./assets/icon-futebol.svg" alt="" class="icone-chamada" /> NOSSOS TALENTOS</p>
+          <h1 class="titulo-atletas">ENCONTRAR ATLETAS</h1>
+          <p class="descricao-atletas">Explore nossa base de atletas talentosos. Use os filtros para encontrar o perfil ideal para seu clube ou projeto.</p>
+        </header>
+
+        <div class="layout-atletas">
+          <aside class="cartao cartao-filtros" data-limite-filtros="1180">
+            <div class="topo-filtros">
+              <div class="titulo-com-expandir-filtros">
+                <button type="button" class="botao-expandir-filtros" data-botao-expandir-filtros aria-label="Expandir filtros" aria-controls="conteudo-filtros" aria-expanded="false" hidden>
+                  <img src="./assets/arrow-proximo.svg" alt="" class="icone-expandir-filtros" />
+                </button>
+                <h2 class="titulo-filtros" data-titulo-expandir-filtros role="button" tabindex="0" aria-controls="conteudo-filtros" aria-expanded="false">FILTROS</h2>
+              </div>
+              <button type="button" class="acao-limpar"><img src="./assets/icon-limpar.svg" alt="" class="icone-limpar" /> Limpar</button>
+            </div>
+
+            <div class="conteudo-filtros" id="conteudo-filtros" data-conteudo-filtros>
+              <div class="grupo-filtro">
+                <label class="rotulo-filtro" for="buscar-atleta">Buscar</label>
+                <div class="campo-com-icone">
+                  <img src="./assets/icon-search-gray.svg" alt="" class="icone-campo-filtro" />
+                  <input id="buscar-atleta" type="text" class="campo-filtro campo-filtro-input" placeholder="Nome do atleta..." />
+                </div>
+              </div>
+
+              <div class="grupo-filtro">
+                <label class="rotulo-filtro" for="idade-min">Idade</label>
+                <div class="linha-campos-idade">
+                  <input id="idade-min" type="text" class="campo-filtro campo-idade" placeholder="Min" />
+                  <input id="idade-max" type="text" class="campo-filtro campo-idade" placeholder="Max" />
+                </div>
+              </div>
+
+              <div class="grupo-filtro">
+                <label class="rotulo-filtro" for="posicao">Posicao</label>
+                <div class="campo-com-icone">
+                  <img src="./assets/icon-dropdown.svg" alt="" class="icone-campo-filtro" />
+                  <select id="posicao" class="campo-filtro campo-filtro-input">
+                    <option value="" selected disabled>Selecione a posicao...</option>
+                    <option>Atacante</option>
+                    <option>Zagueiro</option>
+                    <option>Volante</option>
+                    <option>Meia</option>
+                    <option>Lateral</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="grupo-filtro">
+                <label class="rotulo-filtro" for="estado">Estado</label>
+                <div class="campo-com-icone">
+                  <img src="./assets/icon-dropdown.svg" alt="" class="icone-campo-filtro" />
+                  <select id="estado" class="campo-filtro campo-filtro-input">
+                    <option value="" selected disabled>Selecione o estado...</option>
+                    <option>Sao Paulo</option>
+                    <option>Minas Gerais</option>
+                    <option>Rio de Janeiro</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="grupo-filtro">
+                <label class="rotulo-filtro" for="cidade">Cidade</label>
+                <div class="campo-com-icone">
+                  <img src="./assets/icon-search-gray.svg" alt="" class="icone-campo-filtro" />
+                  <input id="cidade" type="text" class="campo-filtro campo-filtro-input" placeholder="Digite o nome da cidade..." />
+                </div>
+              </div>
+
+              <div class="grupo-filtro">
+                <label class="rotulo-filtro" for="pe-dominante">Pe dominante</label>
+                <div class="campo-com-icone">
+                  <img src="./assets/icon-dropdown.svg" alt="" class="icone-campo-filtro" />
+                  <select id="pe-dominante" class="campo-filtro campo-filtro-input">
+                    <option value="" selected disabled>Canhoto ou Destro...</option>
+                    <option>Canhoto</option>
+                    <option>Destro</option>
+                  </select>
+                </div>
+              </div>
+
+              <button type="button" class="botao botao-filtrar">FILTRAR</button>
+            </div>
+          </aside>
+
+          <div class="coluna-resultados">
+            <div class="grade-cards-atletas">
+              <article class="card-atleta">
+                <div class="topo-card-atleta">
+                  <img src="./assets/imagens-atletas/atleta1.png" alt="Caio Fabio" class="imagem-atleta" />
+                  <span class="tag-posicao-atleta">ATACANTE</span>
+                </div>
+                <div class="conteudo-card-atleta">
+                  <h2 class="nome-atleta">CAIO FABIO <span class="idade-atleta"><span class="numero-idade-atleta">17</span><span class="sufixo-idade-atleta">Anos</span></span></h2>
+                  <div class="meta-atleta">
+                    <span class="meta-item-atleta"><img src="./assets/icon-location.svg" alt="" class="icone-meta-atleta" /> Sao Paulo - SP</span>
+                    <span class="meta-item-atleta"><img src="./assets/icon-chuteira.svg" alt="" class="icone-meta-atleta" /> Canhoto</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="card-atleta">
+                <div class="topo-card-atleta">
+                  <img src="./assets/imagens-atletas/atleta2.png" alt="Samuel Oliveira" class="imagem-atleta" />
+                  <span class="tag-posicao-atleta">ZAGUEIRO</span>
+                </div>
+                <div class="conteudo-card-atleta">
+                  <h2 class="nome-atleta">SAMUEL OLIVEIRA <span class="idade-atleta"><span class="numero-idade-atleta">13</span><span class="sufixo-idade-atleta">Anos</span></span></h2>
+                  <div class="meta-atleta">
+                    <span class="meta-item-atleta"><img src="./assets/icon-location.svg" alt="" class="icone-meta-atleta" /> Ouro Preto - MG</span>
+                    <span class="meta-item-atleta"><img src="./assets/icon-chuteira.svg" alt="" class="icone-meta-atleta" /> Destro</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="card-atleta">
+                <div class="topo-card-atleta">
+                  <img src="./assets/imagens-atletas/atleta3.png" alt="Yago Henrique" class="imagem-atleta" />
+                  <span class="tag-posicao-atleta">VOLANTE</span>
+                </div>
+                <div class="conteudo-card-atleta">
+                  <h2 class="nome-atleta">YAGO HENRIQUE <span class="idade-atleta"><span class="numero-idade-atleta">17</span><span class="sufixo-idade-atleta">Anos</span></span></h2>
+                  <div class="meta-atleta">
+                    <span class="meta-item-atleta"><img src="./assets/icon-location.svg" alt="" class="icone-meta-atleta" /> Mogi Mirim - SP</span>
+                    <span class="meta-item-atleta"><img src="./assets/icon-chuteira.svg" alt="" class="icone-meta-atleta" /> Destro</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="card-atleta">
+                <div class="topo-card-atleta">
+                  <img src="./assets/imagens-atletas/atleta4.png" alt="Guilherme Rocha" class="imagem-atleta" />
+                  <span class="tag-posicao-atleta">ATACANTE</span>
+                </div>
+                <div class="conteudo-card-atleta">
+                  <h2 class="nome-atleta">GUILHERME ROCHA <span class="idade-atleta"><span class="numero-idade-atleta">15</span><span class="sufixo-idade-atleta">Anos</span></span></h2>
+                  <div class="meta-atleta">
+                    <span class="meta-item-atleta"><img src="./assets/icon-location.svg" alt="" class="icone-meta-atleta" /> Contagem - BH</span>
+                    <span class="meta-item-atleta"><img src="./assets/icon-chuteira.svg" alt="" class="icone-meta-atleta" /> Destro</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="card-atleta">
+                <div class="topo-card-atleta">
+                  <img src="./assets/imagens-atletas/atleta5.png" alt="Gabriel Pereira" class="imagem-atleta" />
+                  <span class="tag-posicao-atleta">PONTA</span>
+                </div>
+                <div class="conteudo-card-atleta">
+                  <h2 class="nome-atleta">GABRIEL PEREIRA <span class="idade-atleta"><span class="numero-idade-atleta">16</span><span class="sufixo-idade-atleta">Anos</span></span></h2>
+                  <div class="meta-atleta">
+                    <span class="meta-item-atleta"><img src="./assets/icon-location.svg" alt="" class="icone-meta-atleta" /> Tambacuri - MG</span>
+                    <span class="meta-item-atleta"><img src="./assets/icon-chuteira.svg" alt="" class="icone-meta-atleta" /> Destro</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="card-atleta">
+                <div class="topo-card-atleta">
+                  <img src="./assets/imagens-atletas/atleta6.png" alt="Luiz Fernando" class="imagem-atleta" />
+                  <span class="tag-posicao-atleta">MEIA</span>
+                </div>
+                <div class="conteudo-card-atleta">
+                  <h2 class="nome-atleta">LUIZ FERNANDO <span class="idade-atleta"><span class="numero-idade-atleta">12</span><span class="sufixo-idade-atleta">Anos</span></span></h2>
+                  <div class="meta-atleta">
+                    <span class="meta-item-atleta"><img src="./assets/icon-location.svg" alt="" class="icone-meta-atleta" /> Catanduva - SP</span>
+                    <span class="meta-item-atleta"><img src="./assets/icon-chuteira.svg" alt="" class="icone-meta-atleta" /> Destro</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="card-atleta">
+                <div class="topo-card-atleta">
+                  <img src="./assets/imagens-atletas/atleta7.png" alt="Rafael Borges" class="imagem-atleta" />
+                  <span class="tag-posicao-atleta">LATERAL</span>
+                </div>
+                <div class="conteudo-card-atleta">
+                  <h2 class="nome-atleta">RAFAEL BORGES <span class="idade-atleta"><span class="numero-idade-atleta">11</span><span class="sufixo-idade-atleta">Anos</span></span></h2>
+                  <div class="meta-atleta">
+                    <span class="meta-item-atleta"><img src="./assets/icon-location.svg" alt="" class="icone-meta-atleta" /> Sao Paulo - SP</span>
+                    <span class="meta-item-atleta"><img src="./assets/icon-chuteira.svg" alt="" class="icone-meta-atleta" /> Canhoto</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="card-atleta">
+                <div class="topo-card-atleta">
+                  <img src="./assets/imagens-atletas/atleta8.png" alt="Gabriel Pacheco" class="imagem-atleta" />
+                  <span class="tag-posicao-atleta">PONTA</span>
+                </div>
+                <div class="conteudo-card-atleta">
+                  <h2 class="nome-atleta">GABRIEL PACHECO <span class="idade-atleta"><span class="numero-idade-atleta">17</span><span class="sufixo-idade-atleta">Anos</span></span></h2>
+                  <div class="meta-atleta">
+                    <span class="meta-item-atleta"><img src="./assets/icon-location.svg" alt="" class="icone-meta-atleta" /> Quirinos - SP</span>
+                    <span class="meta-item-atleta"><img src="./assets/icon-chuteira.svg" alt="" class="icone-meta-atleta" /> Destro</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="card-atleta">
+                <div class="topo-card-atleta">
+                  <img src="./assets/imagens-atletas/atleta9.png" alt="Cristiano Henrique" class="imagem-atleta" />
+                  <span class="tag-posicao-atleta">ZAGUEIRO</span>
+                </div>
+                <div class="conteudo-card-atleta">
+                  <h2 class="nome-atleta">CRISTIANO HENRIQUE <span class="idade-atleta"><span class="numero-idade-atleta">17</span><span class="sufixo-idade-atleta">Anos</span></span></h2>
+                  <div class="meta-atleta">
+                    <span class="meta-item-atleta"><img src="./assets/icon-location.svg" alt="" class="icone-meta-atleta" /> Pindorama - SP</span>
+                    <span class="meta-item-atleta"><img src="./assets/icon-chuteira.svg" alt="" class="icone-meta-atleta" /> Destro</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <nav class="paginacao" aria-label="Paginacao de atletas">
+              <a href="#" class="item-paginacao item-paginacao-ativo">1</a>
+              <a href="#" class="item-paginacao">2</a>
+              <a href="#" class="item-paginacao">3</a>
+              <a href="#" class="item-paginacao">4</a>
+              <a href="#" class="item-paginacao item-paginacao-proximo"><span>PROXIMO</span><img src="./assets/arrow-proximo.svg" alt="" class="icone-proximo-paginacao" /></a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape-principal">
+    <div class="container conteudo-rodape">
+      <a href="#" class="marca-rodape" aria-label="Scoutfy - Pagina inicial">
+        <img src="./assets/logo-scoutfy.svg" alt="Scoutfy" class="marca-rodape-imagem" />
+      </a>
+
+      <nav class="navegacao-rodape" aria-label="Links do rodape">
+        <a href="./termos-condicoes.html" class="link-rodape">Termos</a>
+        <a href="./politica-privacidade.html" class="link-rodape">Privacidade</a>
+        <a href="#" class="link-rodape">Contato</a>
+      </nav>
+
+      <p class="texto-rodape">&copy; 2026 Scoutfy. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="./menu-mobile.js"></script>
+</body>
+</html>
+
+
+
+
+

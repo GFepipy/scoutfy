@@ -1,0 +1,163 @@
+﻿.link-navegacao,
+.link-login-cabecalho,
+.link-rodape {
+  color: var(--cor-texto-principal);
+  transition: color var(--duracao-transicao) ease;
+}
+
+.link-navegacao:hover,
+.link-login-cabecalho:hover,
+.link-rodape:hover {
+  color: var(--cor-primaria);
+}
+
+.botao-cadastro:hover {
+  filter: brightness(0.96);
+  transform: translateY(-1px);
+}
+
+.pagina-politica-privacidade .cabecalho-principal {
+  margin-bottom: 22px;
+}
+
+.secao-politica-privacidade {
+  padding-bottom: clamp(3rem, 1.214rem + 4.286vw, 6rem);
+}
+
+.container-politica-privacidade {
+  display: grid;
+  gap: var(--espaco-6);
+  padding-block: clamp(28px, 6vw, 52px) clamp(56px, 10vw, 92px);
+}
+
+.cabecalho-politica-privacidade {
+  display: grid;
+  gap: var(--espaco-3);
+}
+
+.etiqueta-politica {
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  color: var(--cor-texto-principal);
+  letter-spacing: 0.04em;
+  font-weight: var(--peso-bold);
+}
+
+.icone-etiqueta-politica {
+  width: 16px;
+  height: 16px;
+}
+
+.titulo-politica-privacidade {
+  margin-top: 4px;
+  font-size: var(--tamanho-h2);
+  text-transform: uppercase;
+  line-height: 1.05;
+  max-width: none;
+  white-space: nowrap;
+}
+
+.descricao-politica-privacidade {
+  max-width: 76ch;
+  color: var(--cor-texto-secundario);
+  line-height: 1.6;
+}
+
+.data-vigencia-politica {
+  color: var(--cor-primaria);
+  font-weight: var(--peso-bold);
+}
+
+.cartao-politica-privacidade {
+  background: var(--cor-fundo-cartao);
+  border: 0;
+  border-radius: var(--raio-card);
+  padding: clamp(1.5rem, 0.161rem + 3.214vw, 3.75rem);
+  display: grid;
+  gap: var(--espaco-6);
+}
+
+.bloco-politica {
+  display: grid;
+  gap: 12px;
+}
+
+.titulo-bloco-politica {
+  font-size: clamp(1.05rem, 0.739rem + 0.746vw, 1.57rem);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  line-height: 1.35;
+}
+
+.bloco-politica p {
+  color: var(--cor-texto-secundario);
+  line-height: 1.7;
+}
+
+.lista-compromissos {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--cor-texto-secundario);
+  display: grid;
+  gap: 10px;
+  line-height: 1.7;
+}
+
+.bloco-politica-final {
+  padding-top: var(--espaco-4);
+  border-top: 1px solid var(--cor-borda);
+}
+
+@media (max-width: 1074px) {
+  .pagina-politica-privacidade .navegacao-principal,
+  .pagina-politica-privacidade .acoes-cabecalho {
+    display: none;
+  }
+
+  .pagina-politica-privacidade .botao-menu-hamburguer {
+    display: inline-flex;
+    justify-self: end;
+  }
+
+  .pagina-politica-privacidade .cabecalho-conteudo {
+    grid-template-columns: 1fr auto;
+  }
+
+  .pagina-politica-privacidade .marca {
+    justify-self: start;
+  }
+
+  .pagina-politica-privacidade .conteudo-rodape {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .pagina-politica-privacidade .marca-rodape,
+  .pagina-politica-privacidade .navegacao-rodape,
+  .pagina-politica-privacidade .texto-rodape {
+    justify-self: center;
+  }
+}
+
+@media (max-width: 720px) {
+  .titulo-politica-privacidade {
+    white-space: normal;
+    max-width: 100%;
+    font-size: var(--tamanho-h2);
+  }
+
+  .cartao-politica-privacidade {
+    border-radius: var(--raio-card-mobile);
+  }
+
+  .navegacao-rodape {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

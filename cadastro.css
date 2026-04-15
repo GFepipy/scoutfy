@@ -1,0 +1,350 @@
+:root {
+  --largura-maxima: 1200px;
+}
+
+.link-navegacao,
+.link-login-cabecalho {
+  color: var(--cor-texto-principal);
+  transition: color var(--duracao-transicao) ease;
+}
+
+.link-navegacao:hover,
+.link-login-cabecalho:hover,
+.link-rodape:hover,
+.link-login-cadastro:hover {
+  color: var(--cor-primaria);
+}
+
+.botao-cadastro:hover,
+.botao-criar-conta:hover {
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+}
+
+.conteudo-principal {
+  flex: 1;
+  display: flex;
+}
+
+.container-conteudo {
+  width: min(1200px, 100%);
+}
+
+.secao-cadastro {
+  width: 100%;
+  padding: 58px 0 60px;
+}
+
+.cartao-cadastro {
+  display: grid;
+  grid-template-columns: minmax(360px, 41%) minmax(0, 59%);
+  background: var(--cor-fundo-cartao);
+  border-radius: var(--raio-card);
+  overflow: hidden;
+}
+
+.painel-imagem-cadastro {
+  position: relative;
+  min-height: 690px;
+}
+
+.imagem-cadastro {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+.sobreposicao-imagem {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgb(0 0 0 / 12%) 45%, #212222 100%);
+}
+
+.conteudo-imagem-cadastro {
+  position: absolute;
+  left: 40px;
+  right: 40px;
+  bottom: 40px;
+  z-index: 2;
+}
+
+.logo-imagem-cadastro {
+  width: 116px;
+  height: auto;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.titulo-imagem-cadastro {
+  font-size: clamp(1.74rem, 1.5rem + 0.95vw, 2.05rem);
+  line-height: 1.1;
+  margin-bottom: 10px;
+}
+
+.texto-destaque {
+  color: var(--cor-primaria);
+}
+
+.texto-imagem-cadastro {
+  color: var(--cor-texto-secundario);
+  font-size: var(--tamanho-paragrafo);
+  line-height: 1.35;
+}
+
+.painel-formulario-cadastro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 34px;
+}
+
+.topo-cadastro {
+  margin-bottom: 22px;
+}
+
+.titulo-cadastro {
+  font-size: var(--tamanho-h3);
+  line-height: 1.1;
+  margin-bottom: 6px;
+}
+
+.descricao-cadastro {
+  color: var(--cor-texto-secundario);
+  font-size: var(--tamanho-paragrafo);
+  line-height: 1.3;
+  max-width: 390px;
+}
+
+.formulario-cadastro {
+  display: block;
+}
+
+.grade-campos-cadastro {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px 18px;
+}
+
+.grupo-campo-cadastro {
+  display: grid;
+  gap: 9px;
+}
+
+.rotulo-campo-cadastro {
+  font-size: var(--tamanho-paragrafo);
+  font-weight: var(--peso-regular);
+  color: var(--cor-texto-principal);
+}
+
+.controle-campo-cadastro {
+  min-height: 56px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  border: var(--espessura-borda) solid var(--cor-borda);
+  border-radius: var(--raio-botao);
+  padding: 0 16px;
+}
+
+.icone-campo-cadastro {
+  width: 20px;
+  height: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--cor-texto-secundario);
+  flex-shrink: 0;
+}
+
+.icone-campo-cadastro svg {
+  width: 20px;
+  height: 20px;
+}
+
+.icone-whatsapp {
+  width: 19px;
+  height: 19px;
+  display: block;
+}
+
+.campo-cadastro {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--cor-texto-principal);
+  font-size: var(--tamanho-paragrafo);
+  font-family: var(--fonte-principal);
+}
+
+.campo-cadastro::placeholder {
+  color: #a8a5a5;
+}
+
+.controle-campo-cadastro:focus-within {
+  border-color: var(--cor-primaria);
+  box-shadow: 0 0 0 3px rgb(0 255 195 / 12%);
+}
+
+.campo-selecao {
+  appearance: none;
+  color: var(--cor-texto-secundario);
+  background: transparent;
+}
+
+.campo-selecao option {
+  background: var(--cor-fundo-cartao);
+  color: var(--cor-texto-principal);
+}
+
+.campo-selecao option:disabled {
+  color: var(--cor-texto-secundario);
+}
+
+.botao-criar-conta {
+  grid-column: 1 / -1;
+  width: 100%;
+  min-height: 54px;
+  height: 54px;
+  border-radius: var(--raio-botao);
+  background: var(--cor-primaria);
+  color: #000;
+  margin-top: 10px;
+  transition: transform var(--duracao-transicao) ease, filter var(--duracao-transicao) ease;
+}
+
+.texto-login {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: var(--cor-texto-secundario);
+  margin-top: 2px;
+}
+
+.link-login-cadastro {
+  color: var(--cor-primaria);
+  font-weight: var(--peso-bold);
+  transition: color var(--duracao-transicao) ease;
+}
+
+.link-rodape,
+.texto-rodape {
+  color: var(--cor-texto-secundario);
+  font-size: var(--tamanho-paragrafo);
+}
+
+@media (max-width: 1200px) {
+  .navegacao-principal {
+    gap: var(--espaco-5);
+  }
+
+  .cartao-cadastro {
+    grid-template-columns: minmax(250px, 38%) minmax(0, 62%);
+  }
+}
+
+@media (max-width: 1074px) {
+  .cabecalho-conteudo {
+    grid-template-columns: 1fr auto;
+    gap: var(--espaco-4);
+  }
+
+  .botao-menu-hamburguer {
+    display: inline-flex;
+    flex-shrink: 0;
+  }
+
+  .navegacao-principal,
+  .acoes-cabecalho {
+    display: none;
+  }
+
+  .secao-cadastro {
+    padding-top: 52px;
+  }
+
+  .cartao-cadastro {
+    position: relative;
+    grid-template-columns: 1fr;
+    overflow: hidden;
+  }
+
+  .painel-formulario-cadastro {
+    order: 1;
+    position: relative;
+    z-index: 2;
+    margin: 0;
+    background: var(--cor-fundo-cartao);
+    padding: 34px;
+  }
+
+  .painel-imagem-cadastro {
+    order: 2;
+    min-height: 400px;
+    height: 400px;
+    overflow: hidden;
+  }
+
+  .sobreposicao-imagem {
+    background: linear-gradient(180deg, #212222 0%, rgb(0 0 0 / 12%) 100%);
+  }
+
+  .conteudo-imagem-cadastro {
+    left: 24px;
+    right: 24px;
+    bottom: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cartao-cadastro {
+    border-radius: var(--raio-card-mobile);
+  }
+
+  .painel-imagem-cadastro {
+    min-height: 400px;
+    height: 400px;
+  }
+
+  .painel-formulario-cadastro {
+    margin: 0;
+    padding: 34px;
+  }
+
+  .titulo-cadastro {
+    font-size: 28px;
+  }
+
+  .grade-campos-cadastro {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .controle-campo-cadastro,
+  .botao-criar-conta,
+  .link-login-mobile,
+  .botao-cadastro,
+  .botao-cadastro-mobile,
+  .botao-menu-hamburguer,
+  .botao-fechar-menu {
+    min-height: 54px;
+    height: 54px;
+  }
+
+  .conteudo-rodape {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--espaco-3);
+  }
+
+  .texto-rodape {
+    justify-self: start;
+  }
+
+  .navegacao-rodape {
+    gap: var(--espaco-4);
+    flex-wrap: wrap;
+  }
+}

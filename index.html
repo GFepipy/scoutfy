@@ -1,0 +1,430 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scoutfy | Início</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./base.css" />
+  <link rel="stylesheet" href="./index.css" />
+</head>
+<body class="pagina-homepage">
+  <header class="cabecalho-principal">
+    <div class="container container-cabecalho cabecalho-conteudo">
+      <a href="./index.html" class="marca" aria-label="Scoutfy - Página inicial">
+        <img src="./assets/logo-scoutfy.svg" alt="Scoutfy" class="marca-imagem" />
+      </a>
+
+      <button type="button" class="botao-menu-hamburguer" id="botao-menu-mobile" aria-label="Abrir menu principal" aria-controls="painel-menu-mobile" aria-expanded="false">
+        <span class="linha-hamburguer"></span>
+        <span class="linha-hamburguer"></span>
+        <span class="linha-hamburguer"></span>
+      </button>
+
+      <nav class="navegacao-principal" aria-label="Navegação principal">
+        <a href="./index.html" class="link-navegacao link-navegacao-ativo">Início</a>
+        <a href="./pesquisa-atletas.html" class="link-navegacao">Encontrar Atletas</a>
+        <a href="./pesquisa-eventos.html" class="link-navegacao">Encontrar Eventos</a>
+        <a href="#quem-somos" class="link-navegacao">Quem Somos</a>
+      </nav>
+
+      <div class="acoes-cabecalho">
+        <a href="./login.html" class="link-login-cabecalho">Login</a>
+        <a href="./cadastro.html" class="botao botao-cadastro">CADASTRE-SE</a>
+      </div>
+    </div>
+
+    <div class="sobreposicao-menu-mobile" id="sobreposicao-menu-mobile" data-fechar-menu></div>
+
+    <aside class="painel-menu-mobile" id="painel-menu-mobile" aria-hidden="true">
+      <div class="topo-painel-menu">
+        <p class="titulo-painel-menu">Menu</p>
+        <button type="button" class="botao-fechar-menu" aria-label="Fechar menu" data-fechar-menu>&times;</button>
+      </div>
+
+      <nav class="navegacao-menu-mobile" aria-label="Menu mobile">
+        <a href="./index.html" class="link-menu-mobile" data-link-menu-mobile>Início</a>
+        <a href="./pesquisa-atletas.html" class="link-menu-mobile" data-link-menu-mobile>Encontrar Atletas</a>
+        <a href="./pesquisa-eventos.html" class="link-menu-mobile" data-link-menu-mobile>Encontrar Eventos</a>
+        <a href="#quem-somos" class="link-menu-mobile" data-link-menu-mobile>Quem Somos</a>
+      </nav>
+
+      <div class="acoes-menu-mobile">
+        <a href="./login.html" class="link-login-mobile" data-link-menu-mobile>Login</a>
+        <a href="./cadastro.html" class="botao botao-cadastro botao-cadastro-mobile" data-link-menu-mobile>CADASTRE-SE</a>
+      </div>
+    </aside>
+  </header>
+
+  <main class="conteudo-principal">
+    <section class="secao-hero" id="inicio">
+      <div class="container container-home">
+        <article class="card-hero">
+          <div class="conteudo-hero">
+            <p class="etiqueta-secao etiqueta-hero">
+              <img src="./assets/icon-futebol.svg" alt="" class="icone-etiqueta" />
+              SCOUTFY
+            </p>
+
+            <h1 class="titulo-hero">
+              ONDE O TALENTO
+              <span class="destaque-verde">ENCONTRA</span>
+              A OPORTUNIDADE
+            </h1>
+
+            <p class="descricao-hero">
+              Conectamos atletas, clubes e profissionais em uma plataforma que transforma visibilidade em oportunidade real.
+            </p>
+
+            <div class="acoes-hero">
+              <a href="./cadastro.html" class="botao botao-hero botao-hero-primario">
+                CRIAR MINHA CONTA
+                <img src="./assets home/icon-arrow-black.svg" alt="" class="icone-seta-botao" />
+              </a>
+              <a href="#como-funciona" class="botao botao-hero botao-hero-secundario">COMO FUNCIONA</a>
+            </div>
+          </div>
+
+          <div class="midia-hero">
+            <img src="./assets home/image-hero.png" alt="Atleta comemorando em um estádio" class="imagem-hero" />
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="secao-funcionalidades" id="funcionalidades">
+      <div class="container container-home">
+        <div class="cabecalho-secao">
+          <p class="etiqueta-secao">
+            <img src="./assets home/icon-funcionalidades.svg" alt="" class="icone-etiqueta" />
+            FUNCIONALIDADES
+          </p>
+
+          <h2 class="titulo-secao">
+            RECURSOS PARA <span class="destaque-verde">ACELERAR</span> SUA JORNADA
+          </h2>
+
+          <p class="descricao-secao">
+            Ferramentas desenhadas para acelerar conexões entre talentos e oportunidades no futebol.
+          </p>
+        </div>
+
+        <div class="grade-funcionalidades">
+          <article class="card-funcionalidade card-funcionalidade-amplo card-funcionalidade-com-imagem">
+            <img src="./assets home/image-features1.png" alt="Atleta ajustando chuteira antes do treino" class="imagem-card-funcionalidade" />
+
+            <div class="conteudo-card-funcionalidade">
+              <span class="caixa-icone-card">
+                <img src="./assets home/icon-cleats.svg" alt="" class="icone-card" />
+              </span>
+              <h3 class="titulo-card-funcionalidade">SHOWCASE DE ATLETAS</h3>
+              <p class="texto-card-funcionalidade">
+                Perfis completos com histórico, vídeos e dados técnicos para aumentar sua chance de ser notado.
+              </p>
+            </div>
+          </article>
+
+          <article class="card-funcionalidade">
+            <div class="conteudo-card-funcionalidade">
+              <span class="caixa-icone-card">
+                <img src="./assets home/icon-chat.svg" alt="" class="icone-card" />
+              </span>
+              <h3 class="titulo-card-funcionalidade">CONTATO DIRETO</h3>
+              <p class="texto-card-funcionalidade">
+                Fale diretamente com atletas, clubes e profissionais em um chat centralizado, seguro e organizado por oportunidade para acelerar cada conversa.
+              </p>
+            </div>
+          </article>
+
+          <article class="card-funcionalidade">
+            <div class="conteudo-card-funcionalidade">
+              <span class="caixa-icone-card">
+                <img src="./assets home/icon-search.svg" alt="" class="icone-card" />
+              </span>
+              <h3 class="titulo-card-funcionalidade">BUSCA INTELIGENTE</h3>
+              <p class="texto-card-funcionalidade">
+                Encontre os perfis ideais com filtros avançados por idade, posição, região, categoria e momento de carreira, com resultados mais precisos.
+              </p>
+            </div>
+          </article>
+
+          <article class="card-funcionalidade card-funcionalidade-amplo card-funcionalidade-com-imagem card-funcionalidade-direita">
+            <img src="./assets home/image-features2.png" alt="Disputa de bola entre dois jogadores" class="imagem-card-funcionalidade" />
+
+            <div class="conteudo-card-funcionalidade">
+              <span class="caixa-icone-card">
+                <img src="./assets home/icon-events.svg" alt="" class="icone-card" />
+              </span>
+              <h3 class="titulo-card-funcionalidade">EVENTOS E PENEIRAS</h3>
+              <p class="texto-card-funcionalidade">
+                Descubra avaliações técnicas, acompanhe vagas e participe de eventos com visibilidade nacional.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao-quem-somos" id="quem-somos">
+      <div class="container container-home">
+        <div class="layout-quem-somos">
+          <article class="conteudo-quem-somos">
+            <p class="etiqueta-secao">
+              <img src="./assets home/icon-info.svg" alt="" class="icone-etiqueta" />
+              QUEM SOMOS
+            </p>
+
+            <h2 class="titulo-bloco-grande">
+              CONECTANDO
+              <span class="destaque-verde">TALENTOS</span>
+              AO FUTEBOL PROFISSIONAL
+            </h2>
+
+            <p class="descricao-quem-somos">
+              A Scoutfy nasceu para conectar talento e oportunidade. Sabemos que o Brasil tem atletas promissores em todas as regiões, e queremos aproximar cada um deles de clubes, olheiros e profissionais que podem mudar carreiras.
+            </p>
+
+            <ul class="lista-checks">
+              <li class="item-check">
+                <img src="./assets home/icon-check.svg" alt="" class="icone-check" />
+                Visibilidade para atletas de todo o Brasil
+              </li>
+              <li class="item-check">
+                <img src="./assets home/icon-check.svg" alt="" class="icone-check" />
+                Conexão direta entre talentos e profissionais
+              </li>
+              <li class="item-check">
+                <img src="./assets home/icon-check.svg" alt="" class="icone-check" />
+                Ferramentas de análise, busca e monitoramento
+              </li>
+            </ul>
+          </article>
+
+          <figure class="midia-quem-somos">
+            <img src="./assets home/image-about-us.png" alt="Profissional analisando dados de atletas em um tablet" class="imagem-quem-somos" />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao-como-funciona" id="como-funciona">
+      <div class="container container-home">
+        <div class="cabecalho-secao cabecalho-secao-central">
+          <p class="etiqueta-secao etiqueta-central">
+            <img src="./assets home/icon-how-it-works.svg" alt="" class="icone-etiqueta icone-etiqueta-como-funciona" />
+            COMO FUNCIONA
+          </p>
+
+          <h2 class="titulo-secao">
+            DO PERFIL AO <span class="destaque-verde">CONTATO</span> COM CLUBES
+          </h2>
+
+          <p class="descricao-secao">
+            Em poucos passos, você coloca seu talento em evidência e abre novas possibilidades.
+          </p>
+        </div>
+
+        <div class="timeline-como-funciona">
+          <span class="linha-timeline" aria-hidden="true"></span>
+
+          <ol class="lista-passos">
+            <li class="item-passo">
+              <span class="numero-passo">01</span>
+              <h3 class="titulo-passo">CRIE SEU PERFIL</h3>
+              <p class="descricao-passo">Cadastre dados físicos, histórico esportivo e seus objetivos de carreira.</p>
+            </li>
+            <li class="item-passo">
+              <span class="numero-passo">02</span>
+              <h3 class="titulo-passo">SUBA SEUS VÍDEOS</h3>
+              <p class="descricao-passo">Mostre sua evolução com lances, treinos e jogos completos.</p>
+            </li>
+            <li class="item-passo">
+              <span class="numero-passo">03</span>
+              <h3 class="titulo-passo">SEJA VISTO</h3>
+              <p class="descricao-passo">Apareça em buscas de clubes e olheiros com filtros inteligentes da plataforma.</p>
+            </li>
+            <li class="item-passo">
+              <span class="numero-passo">04</span>
+              <h3 class="titulo-passo">FECHE OPORTUNIDADES</h3>
+              <p class="descricao-passo">Receba propostas, participe de seleções e avance com mais segurança.</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao-beneficios" id="beneficios">
+      <div class="container container-home">
+        <div class="cabecalho-secao cabecalho-secao-central">
+          <p class="etiqueta-secao etiqueta-central">
+            <img src="./assets home/icon-benefits.svg" alt="" class="icone-etiqueta" />
+            BENEFÍCIOS
+          </p>
+
+          <h2 class="titulo-secao">
+            BENEFÍCIOS PARA <span class="destaque-verde">CADA</span> PERFIL
+          </h2>
+
+          <p class="descricao-secao">
+            Valor para cada perfil que participa do ecossistema Scoutfy.
+          </p>
+        </div>
+
+        <div class="grade-beneficios">
+          <article class="card-beneficio">
+            <span class="caixa-icone-card">
+              <img src="./assets home/icon-cleats.svg" alt="" class="icone-card" />
+            </span>
+            <h3 class="titulo-card-beneficio">PARA ATLETAS</h3>
+            <p class="texto-card-beneficio">Mais visibilidade para quem quer transformar performance em oportunidade.</p>
+            <ul class="lista-checks lista-checks-card">
+              <li class="item-check"><img src="./assets home/icon-check.svg" alt="" class="icone-check" /> Perfil esportivo completo e profissional</li>
+              <li class="item-check"><img src="./assets home/icon-check.svg" alt="" class="icone-check" /> Contato direto com clubes e olheiros</li>
+              <li class="item-check"><img src="./assets home/icon-check.svg" alt="" class="icone-check" /> Participação em eventos e peneiras</li>
+            </ul>
+          </article>
+
+          <article class="card-beneficio">
+            <span class="caixa-icone-card">
+              <img src="./assets home/icon-ball.svg" alt="" class="icone-card" />
+            </span>
+            <h3 class="titulo-card-beneficio">PARA CLUBES</h3>
+            <p class="texto-card-beneficio">Processo de scouting mais rápido, organizado e orientado por dados.</p>
+            <ul class="lista-checks lista-checks-card">
+              <li class="item-check"><img src="./assets home/icon-check.svg" alt="" class="icone-check" /> Busca segmentada por perfil ideal</li>
+              <li class="item-check"><img src="./assets home/icon-check.svg" alt="" class="icone-check" /> Mapeamento contínuo de talentos por região e categoria</li>
+              <li class="item-check"><img src="./assets home/icon-check.svg" alt="" class="icone-check" /> Decisões com mais contexto técnico</li>
+            </ul>
+          </article>
+
+          <article class="card-beneficio">
+            <span class="caixa-icone-card">
+              <img src="./assets home/icon-business.svg" alt="" class="icone-card" />
+            </span>
+            <h3 class="titulo-card-beneficio">PARA PROFISSIONAIS</h3>
+            <p class="texto-card-beneficio">Ferramentas para empresários, scouts e analistas expandirem sua rede.</p>
+            <ul class="lista-checks lista-checks-card">
+              <li class="item-check"><img src="./assets home/icon-check.svg" alt="" class="icone-check" /> Gestão mais eficiente da carteira de talentos</li>
+              <li class="item-check"><img src="./assets home/icon-check.svg" alt="" class="icone-check" /> Comunicação centralizada com clubes</li>
+              <li class="item-check"><img src="./assets home/icon-check.svg" alt="" class="icone-check" /> Análises para conduzir negociações com mais segurança</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao-cadastro-home" id="faca-cadastro">
+      <div class="container container-home">
+        <article class="card-cadastro-home">
+          <div class="midia-cadastro-home">
+            <img src="./assets home/image-cta.png" alt="Campo de futebol pronto para partida" class="imagem-cadastro-home" />
+          </div>
+
+          <div class="conteudo-cadastro-home">
+            <p class="etiqueta-secao">
+              <img src="./assets home/icon-user.svg" alt="" class="icone-etiqueta" />
+              FAÇA SEU CADASTRO
+            </p>
+
+            <h2 class="titulo-bloco-grande">
+              COMECE SUA
+              <span class="destaque-verde">JORNADA</span>
+              NO SCOUTFY
+            </h2>
+
+            <p class="descricao-cadastro-home">
+              Junte-se à plataforma e acelere sua jornada com mais visibilidade, conexão e oportunidades.
+            </p>
+
+            <a href="./cadastro.html" class="botao botao-cadastro-home">
+              CRIAR MINHA CONTA AGORA
+              <img src="./assets/arrow-right.svg" alt="" class="icone-seta-botao" />
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="secao-faq" id="faq">
+      <div class="container container-home container-faq">
+        <div class="cabecalho-secao cabecalho-secao-central">
+          <p class="etiqueta-secao etiqueta-central">
+            <img src="./assets home/icon-faq.svg" alt="" class="icone-etiqueta" />
+            FAQ
+          </p>
+
+          <h2 class="titulo-secao">
+            DÚVIDAS SOBRE A <span class="destaque-verde">PLATAFORMA</span>
+          </h2>
+
+          <p class="descricao-secao">
+            Tire suas dúvidas sobre como a Scoutfy conecta atletas, clubes e profissionais.
+          </p>
+        </div>
+
+        <div class="lista-faq">
+          <details class="item-faq">
+            <summary class="pergunta-faq">
+              <span>O QUE É A SCOUTFY?</span>
+              <span class="simbolo-faq" aria-hidden="true"></span>
+            </summary>
+            <p class="resposta-faq">
+              A Scoutfy é uma plataforma de conexão esportiva que ajuda atletas a ganharem visibilidade e facilita o trabalho de clubes, olheiros e profissionais.
+            </p>
+          </details>
+
+          <details class="item-faq">
+            <summary class="pergunta-faq">
+              <span>QUEM PODE SE CADASTRAR NA PLATAFORMA?</span>
+              <span class="simbolo-faq" aria-hidden="true"></span>
+            </summary>
+            <p class="resposta-faq">
+              Atletas, clubes, empresários, scouts e outros profissionais do futebol podem criar conta e usar recursos específicos para cada perfil.
+            </p>
+          </details>
+
+          <details class="item-faq">
+            <summary class="pergunta-faq">
+              <span>COMO CLUBES E OLHEIROS ENCONTRAM ATLETAS?</span>
+              <span class="simbolo-faq" aria-hidden="true"></span>
+            </summary>
+            <p class="resposta-faq">
+              A busca inteligente permite filtrar atletas por critérios técnicos e de contexto, com acesso rápido a vídeos, histórico e informações relevantes.
+            </p>
+          </details>
+
+          <details class="item-faq">
+            <summary class="pergunta-faq">
+              <span>A SCOUTFY TAMBÉM DIVULGA EVENTOS E PENEIRAS?</span>
+              <span class="simbolo-faq" aria-hidden="true"></span>
+            </summary>
+            <p class="resposta-faq">
+              Sim. A plataforma publica eventos e peneiras para ampliar oportunidades e aproximar talentos de ambientes de avaliação qualificados.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape-principal">
+    <div class="container conteudo-rodape">
+      <a href="./index.html" class="marca-rodape" aria-label="Scoutfy - Página inicial">
+        <img src="./assets/logo-scoutfy.svg" alt="Scoutfy" class="marca-rodape-imagem" />
+      </a>
+
+      <nav class="navegacao-rodape" aria-label="Links do rodapé">
+        <a href="./termos-condicoes.html" class="link-rodape">Termos</a>
+        <a href="./politica-privacidade.html" class="link-rodape">Privacidade</a>
+        <a href="#" class="link-rodape">Contato</a>
+      </nav>
+
+      <p class="texto-rodape">&copy; 2026 Scoutfy. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="./menu-mobile.js"></script>
+</body>
+</html>

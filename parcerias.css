@@ -1,0 +1,293 @@
+.link-navegacao,
+.link-login-cabecalho,
+.link-rodape {
+  color: var(--cor-texto-principal);
+  transition: color var(--duracao-transicao) ease;
+}
+
+.link-navegacao:hover,
+.link-login-cabecalho:hover,
+.link-rodape:hover {
+  color: var(--cor-primaria);
+}
+
+.secao-parcerias {
+  padding: 52px 0 92px;
+}
+
+.container-conteudo-parcerias {
+  width: min(1340px, calc(100% - (var(--padding-conteudo) * 2)));
+  padding-inline: 0;
+}
+
+.layout-parcerias {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 34px;
+  align-items: start;
+}
+
+.coluna-texto-parceria {
+  padding-top: 0;
+}
+
+.chamada-parceria {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--cor-texto-principal);
+  font-weight: var(--peso-bold);
+  margin-bottom: 18px;
+}
+
+.icone-chamada-parceria {
+  width: 16px;
+  height: 16px;
+}
+
+.titulo-parceria {
+  font-size: var(--tamanho-h1);
+  line-height: 1.02;
+  margin-bottom: 20px;
+  max-width: 620px;
+}
+
+.destaque-titulo-parceria {
+  color: var(--cor-primaria);
+}
+
+.descricao-parceria {
+  color: var(--cor-texto-secundario);
+  max-width: 620px;
+  line-height: 1.35;
+  margin-bottom: 34px;
+}
+
+.grade-beneficios-parceria {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px 34px;
+}
+
+.item-beneficio-parceria {
+  display: grid;
+  align-content: start;
+  gap: 12px;
+}
+
+.caixa-icone-beneficio-parceria {
+  width: 40px;
+  height: 40px;
+  border-radius: 14px;
+  background: #212a2a;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icone-beneficio-parceria {
+  width: 18px;
+  height: 18px;
+}
+
+.titulo-beneficio-parceria {
+  font-size: var(--tamanho-h4);
+}
+
+.texto-beneficio-parceria {
+  color: var(--cor-texto-secundario);
+  line-height: 1.35;
+}
+
+.cartao {
+  background: var(--cor-fundo-cartao);
+  border-radius: var(--raio-card);
+  padding: 34px;
+}
+
+.titulo-formulario-parceria {
+  font-size: var(--tamanho-h3);
+  margin-bottom: 24px;
+}
+
+.formulario-parceria {
+  display: grid;
+  gap: 18px;
+}
+
+.linha-campos-parceria {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.grupo-campo-parceria {
+  display: grid;
+  gap: 8px;
+}
+
+.rotulo-campo-parceria {
+  color: var(--cor-texto-principal);
+}
+
+.campo-com-icone-parceria {
+  position: relative;
+}
+
+.icone-campo-parceria {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  pointer-events: none;
+}
+
+.campo-parceria {
+  width: 100%;
+  height: 54px;
+  border: var(--espessura-borda) solid var(--cor-borda);
+  border-radius: var(--raio-botao);
+  background: transparent;
+  color: var(--cor-texto-secundario);
+  padding: 0 16px 0 44px;
+  font-family: var(--fonte-principal);
+}
+
+.campo-parceria::placeholder {
+  color: var(--cor-texto-secundario);
+}
+
+.grupo-campo-textarea-parceria {
+  gap: 8px;
+}
+
+.campo-textarea-parceria {
+  min-height: 150px;
+  height: 150px;
+  resize: none;
+  padding: 14px 16px;
+}
+
+.linha-checkbox-parceria {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.checkbox-parceria {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  border: var(--espessura-borda) solid var(--cor-borda);
+  border-radius: 6px;
+  display: grid;
+  place-items: center;
+  background: transparent;
+}
+
+.checkbox-parceria:checked {
+  border-color: var(--cor-primaria);
+  background: var(--cor-primaria);
+}
+
+.checkbox-parceria:checked::after {
+  content: "";
+  width: 6px;
+  height: 10px;
+  border-right: 2px solid #000;
+  border-bottom: 2px solid #000;
+  transform: rotate(38deg) translate(-1px, -1px);
+}
+
+.checkbox-parceria:focus-visible {
+  outline: 2px solid var(--cor-primaria);
+  outline-offset: 2px;
+}
+
+.texto-checkbox-parceria {
+  color: var(--cor-texto-secundario);
+  line-height: 1.35;
+}
+
+.botao-enviar-proposta {
+  width: 100%;
+  height: 54px;
+  border-radius: var(--raio-botao);
+  background: var(--cor-primaria);
+  color: #000;
+}
+
+@media (max-width: 1200px) {
+  .layout-parcerias {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 1074px) {
+  .cabecalho-conteudo {
+    grid-template-columns: 1fr auto;
+    gap: var(--espaco-4);
+  }
+
+  .botao-menu-hamburguer {
+    display: inline-flex;
+  }
+
+  .navegacao-principal,
+  .acoes-cabecalho {
+    display: none;
+  }
+
+  .secao-parcerias {
+    padding-top: 46px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cartao {
+    border-radius: var(--raio-card-mobile);
+    padding: 34px;
+  }
+
+  .titulo-parceria {
+    font-size: 58px;
+  }
+
+  .grade-beneficios-parceria {
+    grid-template-columns: 1fr;
+  }
+
+  .linha-campos-parceria {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .botao-cadastro,
+  .botao-menu-hamburguer,
+  .botao-fechar-menu,
+  .link-login-mobile,
+  .botao-cadastro-mobile {
+    min-height: 54px;
+    height: 54px;
+  }
+
+  .conteudo-rodape {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--espaco-3);
+  }
+
+  .texto-rodape {
+    justify-self: start;
+  }
+
+  .navegacao-rodape {
+    gap: var(--espaco-4);
+    flex-wrap: wrap;
+  }
+}

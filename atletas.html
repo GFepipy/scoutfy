@@ -1,0 +1,190 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scoutfy | Atleta</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./base.css" />
+  <link rel="stylesheet" href="./atletas.css" />
+</head>
+<body class="pagina-atletas">
+  <header class="cabecalho-principal">
+    <div class="container container-cabecalho cabecalho-conteudo">
+      <a href="#" class="marca" aria-label="Scoutfy - Pagina inicial">
+        <img src="./assets/logo-scoutfy.svg" alt="Scoutfy" class="marca-imagem" />
+      </a>
+
+      <button type="button" class="botao-menu-hamburguer" id="botao-menu-mobile" aria-label="Abrir menu principal" aria-controls="painel-menu-mobile" aria-expanded="false">
+        <span class="linha-hamburguer"></span>
+        <span class="linha-hamburguer"></span>
+        <span class="linha-hamburguer"></span>
+      </button>
+
+      <nav class="navegacao-principal" aria-label="Navegacao principal">
+        <a href="#" class="link-navegacao">Inicio</a>
+        <a href="./pesquisa-atletas.html" class="link-navegacao">Encontrar Atletas</a>
+        <a href="./pesquisa-eventos.html" class="link-navegacao">Encontrar Eventos</a>
+        <a href="#" class="link-navegacao">Quem Somos</a>
+      </nav>
+
+      <div class="acoes-cabecalho">
+        <a href="./login.html" class="link-login-cabecalho">Login</a>
+        <a href="./cadastro.html" class="botao botao-cadastro">CADASTRE-SE</a>
+      </div>
+    </div>
+
+    <div class="sobreposicao-menu-mobile" id="sobreposicao-menu-mobile" data-fechar-menu></div>
+
+    <aside class="painel-menu-mobile" id="painel-menu-mobile" aria-hidden="true">
+      <div class="topo-painel-menu">
+        <p class="titulo-painel-menu">Menu</p>
+        <button type="button" class="botao-fechar-menu" aria-label="Fechar menu" data-fechar-menu>&times;</button>
+      </div>
+
+      <nav class="navegacao-menu-mobile" aria-label="Menu mobile">
+        <a href="#" class="link-menu-mobile" data-link-menu-mobile>Inicio</a>
+        <a href="./pesquisa-atletas.html" class="link-menu-mobile" data-link-menu-mobile>Encontrar Atletas</a>
+        <a href="./pesquisa-eventos.html" class="link-menu-mobile" data-link-menu-mobile>Encontrar Eventos</a>
+        <a href="#" class="link-menu-mobile" data-link-menu-mobile>Quem Somos</a>
+      </nav>
+
+      <div class="acoes-menu-mobile">
+        <a href="./login.html" class="link-login-mobile" data-link-menu-mobile>Login</a>
+        <a href="./cadastro.html" class="botao botao-cadastro botao-cadastro-mobile" data-link-menu-mobile>CADASTRE-SE</a>
+      </div>
+    </aside>
+  </header>
+
+  <main class="conteudo-principal">
+    <section class="secao-atleta">
+      <div class="container container-conteudo-atleta">
+        <article class="cartao cartao-cabecalho-atleta">
+          <div class="coluna-imagem-atleta">
+            <img src="./assets/imagens-atletas/atleta8.png" alt="Gabriel Pacheco em campo" class="imagem-atleta-principal" />
+          </div>
+
+          <div class="coluna-dados-atleta">
+            <h1 class="nome-atleta-principal">GABRIEL PACHECO</h1>
+
+            <ul class="lista-metas-atleta" aria-label="Dados rapidos do atleta">
+              <li class="item-meta-atleta"><img src="./assets/icon-location.svg" alt="" class="icone-meta-atleta" />Ourinhos - SP</li>
+              <li class="item-meta-atleta"><img src="./assets/icon-calendar.svg" alt="" class="icone-meta-atleta" />17 anos</li>
+              <li class="item-meta-atleta"><img src="./assets/icon-altura.svg" alt="" class="icone-meta-atleta" />1,89m</li>
+              <li class="item-meta-atleta"><img src="./assets/icon-peso.svg" alt="" class="icone-meta-atleta" />66kg</li>
+            </ul>
+
+            <div class="grade-informacoes-atleta">
+              <section class="bloco-info-atleta">
+                <h2 class="titulo-bloco-atleta">PERFIL DO JOGADOR</h2>
+                <dl class="lista-definicoes-atleta">
+                  <div class="linha-definicao-atleta"><dt>Data de nascimento:</dt><dd>08/06/2008</dd></div>
+                  <div class="linha-definicao-atleta"><dt>Local de nascimento:</dt><dd>Ourinhos - SP</dd></div>
+                  <div class="linha-definicao-atleta"><dt>Altura:</dt><dd>1,89m</dd></div>
+                  <div class="linha-definicao-atleta"><dt>Peso:</dt><dd>66kg</dd></div>
+                  <div class="linha-definicao-atleta"><dt>Pe dominante:</dt><dd>Destro</dd></div>
+                  <div class="linha-definicao-atleta"><dt>Posicao:</dt><dd>Zagueiro</dd></div>
+                </dl>
+              </section>
+
+              <section class="bloco-info-atleta">
+                <h2 class="titulo-bloco-atleta">INFORMACOES</h2>
+                <dl class="lista-definicoes-atleta">
+                  <div class="linha-definicao-atleta"><dt>Cidade atual:</dt><dd>Rio de Janeiro</dd></div>
+                  <div class="linha-definicao-atleta"><dt>Federado:</dt><dd>Sim</dd></div>
+                  <div class="linha-definicao-atleta"><dt>Escolaridade:</dt><dd>2 ano EM</dd></div>
+                  <div class="linha-definicao-atleta"><dt>Clube anterior:</dt><dd>Campo Grande - RJ</dd></div>
+                  <div class="linha-definicao-atleta"><dt>Clube atual:</dt><dd>Sabor Artesanal - MG</dd></div>
+                </dl>
+              </section>
+            </div>
+
+            <a href="#" class="botao botao-contato-atleta"><img src="./assets/icon-enviar.svg" alt="" class="icone-botao-contato" />ENTRAR EM CONTATO</a>
+          </div>
+        </article>
+
+        <div class="grade-inferior-atleta">
+          <section class="cartao cartao-videos-atleta">
+            <h3 class="titulo-cartao-atleta">VIDEOS DO JOGADOR</h3>
+
+            <div class="grade-videos-atleta">
+              <article class="card-video-atleta">
+                <div class="capa-video-atleta">
+                  <img src="./assets/imagens-videos/imagem-video1.png" alt="Melhores momentos 2025" class="miniatura-video-atleta" />
+                  <span class="botao-play-video" aria-hidden="true"></span>
+                </div>
+                <p class="titulo-video-atleta">MELHORES MOMENTOS 2025</p>
+              </article>
+
+              <article class="card-video-atleta">
+                <div class="capa-video-atleta">
+                  <img src="./assets/imagens-videos/imagem-video2.png" alt="Gol pelo Campo Grande 2025" class="miniatura-video-atleta" />
+                  <span class="botao-play-video" aria-hidden="true"></span>
+                </div>
+                <p class="titulo-video-atleta">GOL PELO CAMPO GRANDE 2025</p>
+              </article>
+
+              <article class="card-video-atleta">
+                <div class="capa-video-atleta">
+                  <img src="./assets/imagens-videos/imagem-video3.png" alt="Dribles e passes decisivos" class="miniatura-video-atleta" />
+                  <span class="botao-play-video" aria-hidden="true"></span>
+                </div>
+                <p class="titulo-video-atleta">DRIBLES E PASSES DECISIVOS</p>
+              </article>
+
+              <article class="card-video-atleta">
+                <div class="capa-video-atleta">
+                  <img src="./assets/imagens-videos/imagem-video4.png" alt="Melhores momentos 2024" class="miniatura-video-atleta" />
+                  <span class="botao-play-video" aria-hidden="true"></span>
+                </div>
+                <p class="titulo-video-atleta">MELHORES MOMENTOS 2024</p>
+              </article>
+            </div>
+          </section>
+
+          <section class="cartao cartao-historico-atleta">
+            <h3 class="titulo-cartao-atleta">SOBRE E HISTORICO</h3>
+
+            <div class="cabecalho-historico-atleta">
+              <span class="titulo-coluna-historico">TIME</span>
+              <span class="titulo-coluna-historico">DATA</span>
+            </div>
+
+            <ul class="lista-historico-atleta">
+              <li class="linha-historico-atleta"><span>Sabor Artesanal - MG</span><span>17/02/2025</span></li>
+              <li class="linha-historico-atleta"><span>Campo Grande - RJ</span><span>16/04/2024</span></li>
+              <li class="linha-historico-atleta"><span>Uniao Suzano - SP</span><span>14/05/2023</span></li>
+              <li class="linha-historico-atleta"><span>Vila Nova - MG</span><span>08/12/2021</span></li>
+              <li class="linha-historico-atleta"><span>Itapirense - SP</span><span>29/05/2019</span></li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape-principal">
+    <div class="container conteudo-rodape">
+      <a href="#" class="marca-rodape" aria-label="Scoutfy - Pagina inicial">
+        <img src="./assets/logo-scoutfy.svg" alt="Scoutfy" class="marca-rodape-imagem" />
+      </a>
+
+      <nav class="navegacao-rodape" aria-label="Links do rodape">
+        <a href="./termos-condicoes.html" class="link-rodape">Termos</a>
+        <a href="./politica-privacidade.html" class="link-rodape">Privacidade</a>
+        <a href="#" class="link-rodape">Contato</a>
+      </nav>
+
+      <p class="texto-rodape">&copy; 2026 Scoutfy. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="./menu-mobile.js"></script>
+</body>
+</html>
+
+
+
+

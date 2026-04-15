@@ -1,0 +1,195 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scoutfy | Mensagens</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./base.css" />
+  <link rel="stylesheet" href="./mensagens.css" />
+</head>
+<body class="pagina-mensagens">
+  <header class="cabecalho-principal">
+    <div class="container container-cabecalho cabecalho-conteudo">
+      <a href="#" class="marca" aria-label="Scoutfy - Pagina inicial">
+        <img src="./assets/logo-scoutfy.svg" alt="Scoutfy" class="marca-imagem" />
+      </a>
+
+      <button type="button" class="botao-menu-hamburguer" id="botao-menu-mobile" aria-label="Abrir menu principal" aria-controls="painel-menu-mobile" aria-expanded="false">
+        <span class="linha-hamburguer"></span>
+        <span class="linha-hamburguer"></span>
+        <span class="linha-hamburguer"></span>
+      </button>
+
+      <nav class="navegacao-principal" aria-label="Navegacao principal">
+        <a href="#" class="link-navegacao">Inicio</a>
+        <a href="#" class="link-navegacao">Encontrar Atletas</a>
+        <a href="#" class="link-navegacao">Encontrar Eventos</a>
+        <a href="#" class="link-navegacao">Quem Somos</a>
+      </nav>
+
+      <div class="acoes-cabecalho">
+        <button type="button" class="botao-usuario" aria-label="Perfil do usuario">
+          <img src="./assets/profile-user.png" alt="Usuario" class="avatar-usuario-cabecalho" />
+          <span class="texto-usuario">Dashboard</span>
+          <span class="seta-usuario" aria-hidden="true">v</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="sobreposicao-menu-mobile" id="sobreposicao-menu-mobile" data-fechar-menu></div>
+
+    <aside class="painel-menu-mobile" id="painel-menu-mobile" aria-hidden="true">
+      <div class="topo-painel-menu">
+        <p class="titulo-painel-menu">Menu</p>
+        <button type="button" class="botao-fechar-menu" aria-label="Fechar menu" data-fechar-menu>&times;</button>
+      </div>
+
+      <nav class="navegacao-menu-mobile" aria-label="Menu mobile">
+        <a href="#" class="link-menu-mobile" data-link-menu-mobile>Inicio</a>
+        <a href="#" class="link-menu-mobile" data-link-menu-mobile>Encontrar Atletas</a>
+        <a href="#" class="link-menu-mobile" data-link-menu-mobile>Encontrar Eventos</a>
+        <a href="#" class="link-menu-mobile" data-link-menu-mobile>Quem Somos</a>
+      </nav>
+
+      <div class="acoes-menu-mobile">
+        <button type="button" class="botao-menu-usuario" data-link-menu-mobile>
+          <img src="./assets/profile-user.png" alt="Usuario" class="avatar-usuario-cabecalho" />
+          <span class="texto-usuario">Dashboard</span>
+          <span class="seta-usuario" aria-hidden="true">v</span>
+        </button>
+      </div>
+    </aside>
+  </header>
+
+  <main class="conteudo-principal">
+    <section class="secao-mensagens">
+      <div class="container container-conteudo-mensagens">
+        <div class="layout-mensagens">
+          <aside class="cartao painel-conversas">
+            <div class="topo-painel-conversas">
+              <div class="titulo-com-expandir-conversas">
+                <button type="button" class="botao-expandir-conversas" data-botao-expandir-conversas aria-label="Expandir mensagens" aria-controls="conteudo-conversas" aria-expanded="false" hidden>
+                  <img src="./assets/arrow-proximo.svg" alt="" class="icone-expandir-conversas" />
+                </button>
+                <h1 class="titulo-painel-conversas" data-titulo-expandir-conversas role="button" tabindex="0" aria-controls="conteudo-conversas" aria-expanded="false">MENSAGENS</h1>
+              </div>
+            </div>
+
+            <div class="conteudo-conversas" id="conteudo-conversas" data-conteudo-conversas>
+              <div class="area-pesquisa-conversas">
+                <label for="pesquisa-conversa" class="visualmente-oculto">Pesquisar conversa</label>
+                <input id="pesquisa-conversa" type="text" class="campo-pesquisa-conversas" placeholder="Pesquisar..." />
+              </div>
+
+              <div class="lista-conversas">
+                <button type="button" class="item-conversa item-conversa-ativa">
+                  <img src="./assets/foto-perfil1.png" alt="Tecnico Carlos" class="avatar-conversa" />
+                  <div class="conteudo-item-conversa">
+                    <div class="topo-item-conversa">
+                      <strong class="nome-conversa">Tecnico Carlos</strong>
+                      <span class="hora-conversa">18:31</span>
+                    </div>
+                    <p class="ultima-mensagem-conversa">O local conta com campo...</p>
+                  </div>
+                </button>
+
+                <button type="button" class="item-conversa">
+                  <img src="./assets/foto-perfil2.png" alt="Gabriel Jorge Soalheiro" class="avatar-conversa" />
+                  <div class="conteudo-item-conversa">
+                    <div class="topo-item-conversa">
+                      <strong class="nome-conversa">Gabriel Jorge Soalheiro</strong>
+                      <span class="hora-conversa">15:25</span>
+                    </div>
+                    <p class="ultima-mensagem-conversa">Opa.</p>
+                  </div>
+                </button>
+
+                <button type="button" class="item-conversa">
+                  <img src="./assets/foto-perfil3.png" alt="Bruno Ferraz" class="avatar-conversa" />
+                  <div class="conteudo-item-conversa">
+                    <div class="topo-item-conversa">
+                      <strong class="nome-conversa">Bruno Ferraz</strong>
+                      <span class="hora-conversa">11:25</span>
+                    </div>
+                    <p class="ultima-mensagem-conversa">Bom dia</p>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </aside>
+
+          <section class="cartao painel-chat">
+            <header class="topo-chat">
+              <img src="./assets/foto-perfil1.png" alt="Tecnico Carlos" class="avatar-chat" />
+              <h2 class="nome-contato-chat">Tecnico Carlos</h2>
+            </header>
+
+            <div class="corpo-chat">
+              <div class="linha-mensagem linha-mensagem-recebida">
+                <div class="bolha-mensagem bolha-mensagem-recebida">
+                  <p class="texto-mensagem">Ola</p>
+                  <span class="horario-mensagem">05:15</span>
+                </div>
+              </div>
+
+              <div class="linha-mensagem linha-mensagem-recebida">
+                <div class="bolha-mensagem bolha-mensagem-recebida">
+                  <p class="texto-mensagem">Bom dia</p>
+                  <span class="horario-mensagem">05:17</span>
+                </div>
+              </div>
+
+              <div class="linha-mensagem linha-mensagem-enviada">
+                <div class="bolha-mensagem bolha-mensagem-enviada">
+                  <p class="texto-mensagem">Aoba</p>
+                  <span class="horario-mensagem">09:31</span>
+                </div>
+              </div>
+
+              <div class="linha-mensagem linha-mensagem-enviada">
+                <div class="bolha-mensagem bolha-mensagem-enviada bolha-mensagem-longa">
+                  <p class="texto-mensagem">O local conta com campos de futebol em diferentes dimensoes, quadras poliesportivas, quadras de tenis, parque de recreacao infantil, salao de jogos, salao de festas, quiosques com churrasqueiras, capela, ambulatorio medico e vestiarios com armarios. O titulo de socio do clube de campo custa R$ 1.250,00 e pode ser pago em ate 6x sem juros. Tambem tem direito a usar a sede campestre do Palmeiras os associados detentores de titulos remidos e de titulos de fundo social (tradicional).</p>
+                  <span class="horario-mensagem">09:31</span>
+                </div>
+              </div>
+            </div>
+
+            <footer class="rodape-chat">
+              <label for="campo-mensagem" class="visualmente-oculto">Digite uma mensagem</label>
+              <input id="campo-mensagem" type="text" class="campo-digitacao-chat" placeholder="Digite uma mensagem..." />
+              <button type="button" class="botao-enviar-chat" aria-label="Enviar mensagem">
+                <img src="./assets/icon-enviar.svg" alt="" class="icone-enviar-chat" />
+              </button>
+            </footer>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape-principal">
+    <div class="container conteudo-rodape">
+      <a href="#" class="marca-rodape" aria-label="Scoutfy - Pagina inicial">
+        <img src="./assets/logo-scoutfy.svg" alt="Scoutfy" class="marca-rodape-imagem" />
+      </a>
+
+      <nav class="navegacao-rodape" aria-label="Links do rodape">
+        <a href="./termos-condicoes.html" class="link-rodape">Termos</a>
+        <a href="./politica-privacidade.html" class="link-rodape">Privacidade</a>
+        <a href="#" class="link-rodape">Contato</a>
+      </nav>
+
+      <p class="texto-rodape">&copy; 2026 Scoutfy. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="./menu-mobile.js"></script>
+</body>
+</html>
+
+
+
+
